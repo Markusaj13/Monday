@@ -1,0 +1,85 @@
+/* General Styles */
+.default-background-color {
+    background-color: rgba(52, 73, 94, 1);
+}
+
+.monday-foreground-color {
+  color: rgba(228, 120, 51, 1);
+}
+
+.monday-default-text {
+  font-family: "Pacifico", cursive;
+}
+
+
+/* NAVBAR Related Styles */
+
+.diy-icon {
+    width: 40px;
+    height: 20px;
+}
+
+.home-icon {
+    width: 40px;
+    height: 20px;
+}
+
+.purchase-icon {
+    width: 40px;
+    height: 20px;
+}
+
+.navbar-icon {
+    opacity: 0.5;
+}
+
+.navbar-icon:hover {
+  cursor: pointer;
+  animation: buttonHover 1s;
+  opacity: 0.8;
+  transform: scale(1.2);
+}
+
+
+.navbar-icon-active {
+    opacity: 1.0;
+    transform: scale(1.2);    
+}
+
+
+
+@keyframes buttonHover {
+  0% { }
+  100% { transform: scale(1.2); }
+  
+}
+
+/* .. what is this? */
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 20px;
+}
+
+.grid-container > div {
+    padding: 20px;
+    text-align: center;
+}
+
+.page-content {
+    display: grid;
+    grid-template-columns: 15% 70% 15%;
+    grid-gap: 20px;
+    text-align: center;
+    margin-left: 0;
+}
+
+.page-content > div {
+   
+    padding: 50px;
+}
+
+.mitten {
+    background-color: burlywood;
+}
