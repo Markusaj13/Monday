@@ -14,29 +14,34 @@
 
 /* NAVBAR Related Styles */
 
+.navbar {
+  display: flex;
+  justify-content: space-evenly;
+}
+
 .diy-icon {
-    width: 40px;
-    height: 20px;
+    width: 60px;
+    height: 40px;
 }
 
 .home-icon {
-    width: 40px;
-    height: 20px;
+    width: 60px;
+    height: 40px;
 }
 
 .purchase-icon {
-    width: 40px;
-    height: 20px;
+    width: 60px;
+    height: 40px;
 }
 
 .navbar-icon {
-    opacity: 0.5;
+    opacity: 0.7;
 }
 
 .navbar-icon:hover {
   cursor: pointer;
   animation: buttonHover 1s;
-  opacity: 0.8;
+  opacity: 0.9;
   transform: scale(1.2);
 }
 
