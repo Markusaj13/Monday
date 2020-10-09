@@ -1,6 +1,13 @@
 /* General Styles */
+
+html, body {
+  margin: 0;
+  height: 100%;
+}
+
 .default-background-color {
-    background-color: rgba(52, 73, 94, 1);
+  background-color: rgb(228, 227, 253);
+  /*background-color: rgba(52, 73, 94, 1);*/
 }
 
 .monday-foreground-color {
@@ -11,31 +18,32 @@
   font-family: "Pacifico", cursive;
 }
 
-
 /* NAVBAR Related Styles */
 
 .navbar {
   display: flex;
   justify-content: space-evenly;
+  grid-area: navbar;
+  padding-top: 10px;
 }
 
 .diy-icon {
-    width: 60px;
-    height: 40px;
+  width: 60px;
+  height: 40px;
 }
 
 .home-icon {
-    width: 60px;
-    height: 40px;
+  width: 60px;
+  height: 40px;
 }
 
 .purchase-icon {
-    width: 60px;
-    height: 40px;
+  width: 60px;
+  height: 40px;
 }
 
 .navbar-icon {
-    opacity: 0.7;
+  opacity: 0.7;
 }
 
 .navbar-icon:hover {
@@ -45,46 +53,86 @@
   transform: scale(1.2);
 }
 
-
 .navbar-icon-active {
-    opacity: 1.0;
-    transform: scale(1.2);    
+  opacity: 1;
+  transform: scale(1.2);
 }
-
-
 
 @keyframes buttonHover {
-  0% { }
-  100% { transform: scale(1.2); }
-  
+  0% {
+  }
+  100% {
+    transform: scale(1.2);
+  }
 }
 
-/* .. what is this? */
+/* Header related styles */
 
-.grid-container {
-    display: grid;
-    grid-template-columns: auto;
-    grid-gap: 20px;
+.header {
+  grid-area: header;
+  background: rgb(255, 188, 0);
+  background: linear-gradient(
+    170deg,
+    rgba(255, 188, 0, 1) 10%,
+    rgba(255, 128, 0, 1) 50%,
+    rgba(255, 46, 0, 1) 100%
+  );
+ 
+  text-align: center;
+  font-size: 50pt;
+  padding: 70px;
+  color: rgba(52, 73, 94, 1);
 }
 
-.grid-container > div {
-    padding: 20px;
-    text-align: center;
+/* Pitch related styles */
+
+.pitch {
+  grid-area: pitch;
 }
 
-.page-content {
-    display: grid;
-    grid-template-columns: 15% 70% 15%;
-    grid-gap: 20px;
-    text-align: center;
-    margin-left: 0;
-}
+/*Footer related styles */
 
-.page-content > div {
+.footer {
+  grid-area: footer;
+  text-align: center;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
    
-    padding: 50px;
 }
 
-.mitten {
-    background-color: burlywood;
+.footer a {
+    text-decoration: none;
+    color:  rgba(52, 73, 94, 1);
+    padding: 30px;
+}
+
+.footer a:hover {
+    color:  rgb(228, 227, 253);
+    background:  rgba(52, 73, 94, 1);
+    border-radius: 10px;
+}
+
+/* Page structure*/
+
+.home-container {
+  display: grid;
+  grid-template-areas:
+    "navbar navbar navbar navbar navbar"
+    "header header header header header"
+    "left-space pitch pitch pitch right-space"
+    "footer footer footer footer footer";
+  grid-gap: 10px;
+
+  grid-template-rows: 5% 30% 55% 5%;
+  height: 100%;
+}
+
+.left-space {
+  grid-area: left-space;
+}
+
+.right-space {
+  grid-area: right-space;
 }
