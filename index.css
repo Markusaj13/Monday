@@ -1,8 +1,10 @@
 /* General Styles */
 
-html, body {
+html,
+body {
   margin: 0;
   height: 100%;
+  width: auto;
 }
 
 .default-background-color {
@@ -28,18 +30,18 @@ html, body {
 }
 
 .diy-icon {
-  width: 60px;
-  height: 40px;
+  width: auto;
+  height: 100%;
 }
 
 .home-icon {
-  width: 60px;
-  height: 40px;
+  width: auto;
+  height: 100%;
 }
 
 .purchase-icon {
-  width: 60px;
-  height: 40px;
+  width: auto;
+  height: 100%;
 }
 
 .navbar-icon {
@@ -77,11 +79,59 @@ html, body {
     rgba(255, 128, 0, 1) 50%,
     rgba(255, 46, 0, 1) 100%
   );
- 
+
   text-align: center;
   font-size: 50pt;
-  padding: 70px;
   color: rgba(52, 73, 94, 1);
+}
+
+.header-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+@media only screen and (min-width: 2800px) {
+  .header {
+    font-size: 120pt;
+  }
+}
+
+@media only screen and (max-width: 2800px) and (min-width: 1920px) {
+  .header {
+    font-size: 80pt;
+  }
+}
+
+@media only screen and (max-width: 767px) and (min-width: 577px) {
+  .header {
+    font-size: 40pt;
+  }
+}
+
+@media only screen and (max-width: 576px) and (min-width: 512px) {
+  .header {
+    font-size: 35pt;
+  }
+}
+
+@media only screen and (max-width: 511px) and (min-width: 458px) {
+  .header {
+    font-size: 32pt;
+  }
+}
+
+@media only screen and (max-width: 457px) and (min-width: 313px) {
+  .header {
+    font-size: 25pt;
+  }
+}
+
+@media only screen and (max-width: 312px) and (min-width: 0px) {
+  .header {
+    font-size: 20pt;
+  }
 }
 
 /* Pitch related styles */
@@ -99,19 +149,17 @@ html, body {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-   
 }
 
 .footer a {
-    text-decoration: none;
-    color:  rgba(52, 73, 94, 1);
-    padding: 30px;
+  text-decoration: none;
+  color: rgba(52, 73, 94, 1);
 }
 
 .footer a:hover {
-    color:  rgb(228, 227, 253);
-    background:  rgba(52, 73, 94, 1);
-    border-radius: 10px;
+  color: rgb(228, 227, 253);
+  background: rgba(52, 73, 94, 1);
+  border-radius: 10px;
 }
 
 /* Page structure*/
@@ -119,13 +167,14 @@ html, body {
 .home-container {
   display: grid;
   grid-template-areas:
-    "navbar navbar navbar navbar navbar"
-    "header header header header header"
-    "left-space pitch pitch pitch right-space"
-    "footer footer footer footer footer";
+    "navbar navbar navbar"
+    "header header header"
+    "left-space pitch right-space"
+    "footer footer footer";
   grid-gap: 10px;
 
-  grid-template-rows: 5% 30% 55% 5%;
+  grid-template-rows: 50px minmax(160px, 30%) 55% 5%;
+  grid-template-columns: 1fr 70% 1fr;
   height: 100%;
 }
 
@@ -135,4 +184,16 @@ html, body {
 
 .right-space {
   grid-area: right-space;
+}
+
+@media only screen and (min-width: 2800px) {
+  .home-container {
+    grid-template-rows: 50px minmax(350px, 30%) 55% 5%;
+  }
+}
+
+@media only screen and (max-width: 2800px) and (min-width: 1920px) {
+  .home-container {
+    grid-template-rows: 50px minmax(250px, 30%) 55% 5%;
+  }
 }
