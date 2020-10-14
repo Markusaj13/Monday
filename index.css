@@ -16,8 +16,14 @@ body {
   color: rgba(228, 120, 51, 1);
 }
 
-.monday-default-text {
-  font-family: "Pacifico", cursive;
+.monday-header-text {
+  font-family: 'Russo One', sans-serif;
+  color:rgb(26, 40, 54);
+}
+
+.monday-text {
+  font-family: 'Source Sans Pro', sans-serif;
+  color: rgb(26, 40, 54);
 }
 
 /* NAVBAR Related Styles */
@@ -82,7 +88,6 @@ body {
 
   text-align: center;
   font-size: 50pt;
-  color: rgba(52, 73, 94, 1);
 }
 
 .header-text {
@@ -138,6 +143,55 @@ body {
 
 .pitch {
   grid-area: pitch;
+
+  /* This places all the pitch-entries in pitch on a row  */
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 30% 30% 30%;
+  margin-top: 3%;
+}
+
+/* Pitch entry */
+
+.pitch-entry-icon {
+  grid-area: pitch-entry-icon;
+}
+
+.pitch-entry-icon-image {
+  width: 100%;
+  height: 100%;
+}
+
+.pitch-entry-title {
+  grid-area: pitch-entry-title;
+  padding-left: 5%;
+  /* This is what we use to make text in center of column */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 18pt;
+}
+
+.pitch-entry-text {
+  grid-area: pitch-entry-text;
+  padding-top: 10%;
+  hyphens: auto;
+
+
+  word-break: break-all;
+  
+  /*overflow-wrap: break-word; */
+}
+
+.pitch-entry {
+  display: grid;
+  grid-template-areas:
+    "pitch-entry-icon pitch-entry-title"
+    "pitch-entry-text pitch-entry-text";
+
+  grid-template-columns: 25% 65%;
+  grid-template-rows: 15% 75%;
 }
 
 /*Footer related styles */
