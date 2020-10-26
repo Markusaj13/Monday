@@ -1,0 +1,127 @@
+/* This file contains SCSS for the home page pitch */
+
+.pitch {
+  grid-area: pitch;
+
+  /* This places all the pitch-entries in pitch on a row  */
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 30% 30% 30%;
+  margin-top: 3%;
+}
+
+/* Pitch entry */
+
+.pitch-entry-icon {
+  grid-area: pitch-entry-icon;
+}
+
+.pitch-entry-icon-image {
+  width: 100%;
+  height: 100%;
+}
+
+.pitch-entry-title {
+  grid-area: pitch-entry-title;
+  padding-left: 5%;
+  /* This is what we use to make text in center of column */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 18pt;
+}
+
+.pitch-entry-text {
+  grid-area: pitch-entry-text;
+  padding-top: 10%;
+  hyphens: auto;
+
+  white-space: normal;
+  word-break: break-word;
+
+  /*overflow-wrap: break-word; */
+}
+
+.pitch-entry {
+  display: grid;
+  grid-template-areas:
+    "pitch-entry-icon pitch-entry-title"
+    "pitch-entry-text pitch-entry-text";
+
+  grid-template-columns: 25% 65%;
+  grid-template-rows: 15% 75%;
+}
+
+@media only screen and (min-width: 2800px) {
+  .pitch-entry-title {
+    font-size: 40pt;
+  }
+  .pitch-entry-text {
+    font-size: 30pt;
+  }
+}
+
+@media only screen and (max-width: 2800px) and (min-width: 1921px) {
+  .pitch-entry-title {
+    font-size: 35pt;
+  }
+  .pitch-entry-text {
+    font-size: 25pt;
+  }
+}
+
+@media only screen and (max-width: 800px) and (min-width: 651px) {
+  .pitch {
+    grid-template-columns: 100%;
+    grid-template-rows: 200px 200px 200px;
+  }
+  .pitch-entry {
+    grid-template-columns: 15% 85%;
+    grid-template-rows: 25% 75%;
+  }
+  .pitch-entry-text {
+    padding-top: 2%;
+  }
+}
+
+@media only screen and (max-width: 650px) and (min-width: 501px) {
+  .pitch {
+    grid-template-columns: 100%;
+    grid-template-rows: 250px 250px 250px;
+  }
+  .pitch-entry {
+    grid-template-columns: 15% 85%;
+    grid-template-rows: 25% 75%;
+  }
+
+  .pitch-entry-text {
+    padding-top: 2%;
+  }
+}
+
+@media only screen and (max-width: 500px) and (min-width: 0px) {
+  .pitch {
+    grid-template-columns: 100%;
+    grid-template-rows: 300px 300px 300px;
+  }
+  .pitch-entry {
+    grid-template-columns: 15% 85%;
+    grid-template-rows: 25% 75%;
+  }
+  .pitch-entry-text {
+    padding-top: 2%;
+  }
+}
+
+@media only screen and (max-width: 420px) and (min-width: 0px) {
+  .pitch-entry-title {
+    font-size: 16pt;
+  }
+}
+
+@media only screen and (max-width: 420px) and (min-width: 0px) {
+  .pitch {
+    grid-template-rows: 350px 350px 350px;
+  }
+}

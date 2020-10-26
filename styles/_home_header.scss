@@ -1,0 +1,63 @@
+/* This file contains SCSS for the main home page header */
+
+.header {
+  grid-area: header;
+  background: linear-gradient(
+    170deg,
+    rgba(255, 188, 0, 1) 10%,
+    rgba(255, 128, 0, 1) 50%,
+    rgba(255, 46, 0, 1) 100%
+  );
+
+  text-align: center;
+  font-size: 50pt;
+}
+
+.header-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+@media only screen and (min-width: 2800px) {
+  .header {
+    font-size: 120pt;
+  }
+}
+
+@media only screen and (max-width: 2800px) and (min-width: 1920px) {
+  .header {
+    font-size: 80pt;
+  }
+}
+
+@media only screen and (max-width: 767px) and (min-width: 577px) {
+  .header {
+    font-size: 40pt;
+  }
+}
+
+@media only screen and (max-width: 576px) and (min-width: 512px) {
+  .header {
+    font-size: 35pt;
+  }
+}
+
+@media only screen and (max-width: 511px) and (min-width: 458px) {
+  .header {
+    font-size: 32pt;
+  }
+}
+
+@media only screen and (max-width: 457px) and (min-width: 313px) {
+  .header {
+    font-size: 25pt;
+  }
+}
+
+@media only screen and (max-width: 312px) and (min-width: 0px) {
+  .header {
+    font-size: 20pt;
+  }
+}

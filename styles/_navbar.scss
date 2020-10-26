@@ -1,0 +1,48 @@
+/* This file contains SCSS for the navbar */
+
+#diy-icon-container { grid-area: diyIcon; }
+#home-icon-container { grid-area: homeIcon; }
+#purchase-icon-container { grid-area: purchaseIcon; }
+#navbar-left-padding { grid-area: navbar-left-padding; }
+#navbar-right-padding { grid-area: navbar-right-padding; }
+
+.navbar-icon-container { 
+  text-align:center;
+}
+
+.navbar-icon {
+  width: auto;
+  height: 100%;
+  opacity: 0.7;
+}
+
+.navbar-icon:hover {
+  cursor: pointer;
+  animation: buttonHover 1s;
+  opacity: 0.9;
+  transform: scale(1.2);
+}
+
+.navbar-icon-active {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+@keyframes buttonHover {
+  0% {
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+
+.navbar {
+  display: grid;
+  grid-template-areas: 'navbar-left-padding homeIcon diyIcon purchaseIcon navbar-right-padding';
+  grid-template-columns: 40% 6% 6% 6% 40%;
+  grid-template-rows: 40px;
+  grid-area: navbar;
+  padding-top: 10px;
+  overflow: hidden;
+  padding-bottom: 10px;
+}

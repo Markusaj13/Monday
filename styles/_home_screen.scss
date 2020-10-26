@@ -1,0 +1,46 @@
+/* This file contains SCSS for the main home page layout */
+
+.home-container {
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "left-space pitch right-space";
+  grid-gap: 10px;
+
+  grid-template-rows: minmax(160px, 30%) 55%;
+  grid-template-columns: 15% 70% 15%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.left-space {
+  grid-area: left-space;
+}
+
+.right-space {
+  grid-area: right-space;
+}
+
+@media only screen and (min-width: 2800px) {
+  .home-container {
+    grid-template-rows: minmax(350px, 30%) 55%;
+  }
+}
+
+@media only screen and (max-width: 2800px) and (min-width: 1920px) {
+  .home-container {
+    grid-template-rows: minmax(250px, 30%) 55%;
+  }
+}
+
+@media only screen and (max-width: 1100px) and (min-width: 801px) {
+  .home-container {
+    grid-template-columns: 1fr 90% 1fr;
+  }
+}
+
+@media only screen and (max-width: 800px) and (min-width: 0px) {
+  .home-container {
+    grid-template-columns: 1fr 60% 1fr;
+  }
+}

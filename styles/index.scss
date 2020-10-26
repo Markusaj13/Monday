@@ -1,0 +1,32 @@
+@import 'pitch';
+@import 'navbar';
+@import 'home_screen';
+@import 'home_header';
+@import 'footer';
+
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  width: auto;
+}
+
+.default-background-color {
+  background-color: rgb(228, 227, 253);
+  /*background-color: rgba(52, 73, 94, 1);*/
+}
+
+.monday-foreground-color {
+  color: rgba(228, 120, 51, 1);
+}
+
+.monday-header-text {
+  font-family: "Russo One", sans-serif;
+  color: rgb(26, 40, 54);
+}
+
+.monday-text {
+  font-family: "Source Sans Pro", sans-serif;
+  color: rgb(26, 40, 54);
+}

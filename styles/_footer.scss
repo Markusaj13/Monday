@@ -1,0 +1,57 @@
+/* This file contains SCSS for the footer */
+
+.footer {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  background-color: rgb(228, 227, 253);
+  overflow: hidden;
+  font-weight: bolder;
+}
+
+.footer a {
+  display: inline-block;
+  text-decoration: none;
+  color: rgba(52, 73, 94, 1);
+  padding: 14px 16px;
+  border-radius: 10px;
+}
+
+.footer a:hover {
+  background: linear-gradient(
+    170deg,
+    rgba(255, 188, 0, 0.75) 10%,
+    rgba(255, 128, 0, 0.75) 50%,
+    rgba(255, 46, 0, 0.75) 100%
+  );
+  color: rgb(35, 53, 71);
+  
+  animation-name: footerKnappAnimation;
+  animation-duration: 0.25s;
+
+  transform: scale(1.1);
+}
+
+@keyframes footerKnappAnimation {
+  0% {
+    transform: scale(1.0);
+    color: rgb(35, 53, 71);
+  }
+  100% {
+    transform: scale(1.1);
+    color: rgb(35, 53, 71);
+  }
+}
+
+@media only screen and (min-width: 2800px) {
+  .footer a {
+    font-size: 20pt;
+  }
+} 
+
