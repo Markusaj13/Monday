@@ -5,22 +5,20 @@ let r = new Router();
 
 const pageContainer = document.getElementById("page-container");
 
+//const host = window.location.hostname;
+//const port = window.location.port;
+//const protocol = window.location.protocol;
 
 // Adds our paths
 r.add("/home", "html/home.html", (html) => {
-    console.log("Opening home: " + html);
-
     pageContainer.innerHTML = html;
-
 })
 
 r.add("/diy", "html/diy.html", (html) => {
-    console.log("Opening diy: " + html);
     pageContainer.innerHTML = html;
 })
 
 r.add("/purchase", "html/purchase.html", (html) => {
-    console.log("Opening purchase: " + html);
     pageContainer.innerHTML = html;
 })
 
