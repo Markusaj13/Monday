@@ -14,6 +14,10 @@ Watch the stylesheets using
 sass --watch styles:dist
 ```
 
-Watch the scripts using
+Convert the javascript using
+
 ```bash
+# TODO add file watching so that you only have to run it once
+browserify scripts/main.js > dist/index.js
 ```
+
