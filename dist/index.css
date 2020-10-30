@@ -167,16 +167,30 @@
     grid-template-columns: 1fr 60% 1fr; } }
 /* This file contains SCSS for the main home page header */
 .header {
+  position: relative;
   grid-area: header;
   background: linear-gradient(170deg, #ffbc00 10%, #ff8000 50%, #ff2e00 100%);
   text-align: center;
   font-size: 50pt; }
 
 .header-text {
+  position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100%; }
+  height: 100%;
+  width: 100%;
+  z-index: 999; 
+}
+
+.background-image {
+  height: 100%;
+  width: 100%;
+  background-image: url("../resources/icons/header-background.svg");
+  position: absolute;
+  opacity: 0.03;
+  z-index: 10; 
+}
 
 @media only screen and (min-width: 2800px) {
   .header {
