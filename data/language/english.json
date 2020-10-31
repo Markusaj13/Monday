@@ -1,8 +1,8 @@
 {
   "pitch-no-wake-word-title": "No Wakeup Phrase",
-  "pitch-no-wake-word-text": "Friday is a no-wake-word voice assistant. Friday does not need to be woken up by a name to execute tasks - Instead Friday works by always listening for keywords to perform actions, for a more seamless experience.",
+  "pitch-no-wake-word-text": "Friday is a wake-word-less voice assistant. Friday is always listening for key phrases - For example with Friday you can control your lights at home by only uttering 'lights on' or 'lights off'. By bypassing the wake-up step we hope to provide a more seamless voice interface experience.",
   "pitch-fast-title": "Fast",
-  "pitch-fast-text": "Friday is fast - This is achieved because Friday runs on-device and does not need to communicate with some server that would incur latency. Because Friday is offline it works quickly even in places with poor internet connection.",
-  "pitch-safe-title": "Secure",
-  "pitch-safe-text": "Friday cares about your right to own your personal data. Friday does not send your voice anywhere, Friday works only on-device and you can therefore rest safe that noone is listening in."
+  "pitch-fast-text": "Friday is fast - Friday only runs on-device, meaning all latency incurred by internet communication is avoided. From our 2-sample UX study we have been able to conclude that quick response times are essential for a good user experience - Something which Friday is great at providing! Because Friday is an offline Assistant it also works well in areas where internet connection is poor or non-existant.",
+  "pitch-safe-title": "Privacy",
+  "pitch-safe-text": "Friday cares about your right to own your personal data - Since Friday works only on-device your data is sent nowhere - Fridays memory length varies from version to version, but no matter what version: Friday will never retain the audio for longer than 10 seconds - The reason why Friday retains Audio at all is because it searches this buffer for utterances."
 }

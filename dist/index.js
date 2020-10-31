@@ -64,15 +64,14 @@ module.exports = LanguageService
 },{}],2:[function(require,module,exports){
 var Router = require("./router.js");
 var LanguageService = require("./language_service");
+var UrlParser = require("./urlparse");
 
+const urlParser = new UrlParser();
 // Creates an instance of our router
 const r = new Router();
 
 const pageContainer = document.getElementById("page-container");
 
-//const host = window.location.hostname;
-//const port = window.location.port;
-//const protocol = window.location.protocol;
 
 // Adds our paths
 r.add("/home", "html/home.html", (html) => {
@@ -90,6 +89,7 @@ r.add("/purchase", "html/purchase.html", (html) => {
 // Initializes our paths (Loads HTMLs into browser)
 r.init();
 
+urlParser.parse_current_url();
 // Opens /home when it is ready
 r.when_ready("/home");
 
@@ -200,7 +200,7 @@ purchaseIcon.onclick = () => {
     language_service.set_language(CurrentLanguage);
 }
 
-},{"./language_service":1,"./router.js":3}],3:[function(require,module,exports){
+},{"./language_service":1,"./router.js":3,"./urlparse":4}],3:[function(require,module,exports){
 class Route {
     constructor(url_path, html_path, callback) {
         /*
@@ -293,5 +293,24 @@ class Router {
 }
 
 module.exports = Router
+
+},{}],4:[function(require,module,exports){
+class UrlParser {
+    constructor() {
+
+    }
+
+    parse_current_url = () => {
+        console.log("Search", window.location.search);
+
+    }
+
+    get_arg = (name) => {
+
+    }
+
+}
+
+module.exports = UrlParser;
 
 },{}]},{},[2]);
