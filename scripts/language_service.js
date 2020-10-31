@@ -3,14 +3,13 @@ class LanguageService {
         this.languages = new Map();
 
 
-        console.log("Getting stuff");
         this.get_language_file("data/language/svenska.json", "svenska");
         this.get_language_file("data/language/english.json", "english");
     }
 
     get_language_file = (url, name) => {
         // Create request object
-        let xhr = new XMLHttpRequest();
+        var xhr = new XMLHttpRequest();
 
         // Define function that will deal with response
         xhr.onreadystatechange = (e) => {
@@ -31,11 +30,11 @@ class LanguageService {
 
     set_language = (name) => {
 
-        let lang = this.languages.get(name);
+        var lang = this.languages.get(name);
 
         if (lang != undefined) {
             Object.entries(lang).forEach(([id, text]) => {
-                let obj = document.getElementById(id);
+                var obj = document.getElementById(id);
                 if (obj != undefined) {
                     obj.innerText = text;
                 }
@@ -49,7 +48,7 @@ class LanguageService {
     }
 
     when_ready = (name) => {
-        let attempt_to_set_language = () => {
+        var attempt_to_set_language = () => {
             // Try to load page
             if (!this.set_language(name))
                 setTimeout(attempt_to_set_language, 100);

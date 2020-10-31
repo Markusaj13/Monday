@@ -4,14 +4,13 @@ class LanguageService {
         this.languages = new Map();
 
 
-        console.log("Getting stuff");
         this.get_language_file("data/language/svenska.json", "svenska");
         this.get_language_file("data/language/english.json", "english");
     }
 
     get_language_file = (url, name) => {
         // Create request object
-        let xhr = new XMLHttpRequest();
+        var xhr = new XMLHttpRequest();
 
         // Define function that will deal with response
         xhr.onreadystatechange = (e) => {
@@ -32,11 +31,11 @@ class LanguageService {
 
     set_language = (name) => {
 
-        let lang = this.languages.get(name);
+        var lang = this.languages.get(name);
 
         if (lang != undefined) {
             Object.entries(lang).forEach(([id, text]) => {
-                let obj = document.getElementById(id);
+                var obj = document.getElementById(id);
                 if (obj != undefined) {
                     obj.innerText = text;
                 }
@@ -50,7 +49,7 @@ class LanguageService {
     }
 
     when_ready = (name) => {
-        let attempt_to_set_language = () => {
+        var attempt_to_set_language = () => {
             // Try to load page
             if (!this.set_language(name))
                 setTimeout(attempt_to_set_language, 100);
@@ -67,7 +66,7 @@ var Router = require("./router.js");
 var LanguageService = require("./language_service");
 
 // Creates an instance of our router
-let r = new Router();
+const r = new Router();
 
 const pageContainer = document.getElementById("page-container");
 
@@ -141,7 +140,7 @@ const SvenskaButton = document.getElementById("navbar-language-svenska")
 const EnglishButton = document.getElementById("navbar-language-english")
 
 // Create Language Service
-let language_service = new LanguageService();
+const language_service = new LanguageService();
 var CurrentLanguage = "svenska";
 
 SvenskaButton.onclick = () => {
@@ -208,7 +207,7 @@ class Route {
         // since it is available in many browsers by default.
 
         // Create request object
-        let xhr = new XMLHttpRequest();
+        var xhr = new XMLHttpRequest();
 
         // Define function that will deal with response
         xhr.onreadystatechange = (e) => {
@@ -241,7 +240,7 @@ class Router {
     add = (url, html_path, callback) => this.routes.set(url, new Route(url, html_path, callback));
     init = () => this.routes.forEach((route, _) => route.async_load());
     go = (url) => {
-        let route = this.routes.get(url);
+        var route = this.routes.get(url);
 
         if (route != undefined) {
             route.callback(route.html_content);
@@ -252,11 +251,11 @@ class Router {
     }
 
     when_ready = (url) => {
-        let route = this.routes.get(url);
+        var route = this.routes.get(url);
         if (route != undefined) {
             // A function that attempts to load the page recursively
             // If it succeeds it returns true, else false.
-            let attempt_to_load_page = () => {
+            var attempt_to_load_page = () => {
                 // Try to load page
                 console.log("Trying to load")
                 console.log(route.html)
