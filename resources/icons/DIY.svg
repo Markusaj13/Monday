@@ -7,13 +7,13 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="297mm"
-   height="210mm"
-   viewBox="0 0 297 210"
+   width="211.05717mm"
+   height="202.30028mm"
+   viewBox="0 0 211.05717 202.30028"
    version="1.1"
    id="svg1875"
    inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
-   sodipodi:docname="DIY_2.svg">
+   sodipodi:docname="DIY.svg">
   <defs
      id="defs1869">
     <rect
@@ -136,8 +136,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.70710678"
-     inkscape:cx="627.32636"
-     inkscape:cy="364.09413"
+     inkscape:cx="351.07031"
+     inkscape:cy="337.31164"
      inkscape:document-units="mm"
      inkscape:current-layer="g2525"
      inkscape:document-rotation="0"
@@ -152,7 +152,9 @@
        id="grid2438"
        gridanglex="45"
        gridanglez="45"
-       empspacing="15" />
+       empspacing="15"
+       originx="-73.092743"
+       originy="-66.954572" />
   </sodipodi:namedview>
   <metadata
      id="metadata1872">
@@ -169,7 +171,8 @@
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
-     id="layer1">
+     id="layer1"
+     transform="translate(-36.546373,-3.7211579)">
     <g
        id="g2525">
       <g
@@ -296,7 +299,7 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.4px;line-height:1.25;font-family:'Bernard MT Condensed';-inkscape-font-specification:'Bernard MT Condensed, ';text-align:center;white-space:pre;shape-inside:url(#rect3200);fill:#1a2836;fill-opacity:1;stroke:none"
          x="6.847105"
          y="0"
-         transform="matrix(1.3752501,-1.3752501,1.3752501,1.3752501,-172.94034,244.91052)"><tspan
+         transform="matrix(1.3752501,-1.3752501,1.3752501,1.3752501,-159.84413,222.0857)"><tspan
            x="125.83125"
            y="55.267778"><tspan
              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.4px;font-family:'Bernard MT Condensed';-inkscape-font-specification:'Bernard MT Condensed, ';text-align:center;text-anchor:middle;fill:#1a2836;fill-opacity:1">DIY</tspan></tspan></text>
