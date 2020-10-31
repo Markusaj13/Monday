@@ -78,21 +78,37 @@ const EnglishButton = document.getElementById("navbar-language-english")
 // Create Language Service
 const language_service = new LanguageService();
 var CurrentLanguage = "svenska";
+var ActiveButton = SvenskaButton;
+
+
 
 SvenskaButton.onclick = () => {
+    ActiveButton.classList.toggle("navbar-language-active", false);
+
     CurrentLanguage = "svenska";
+    ActiveButton = SvenskaButton;
+
     language_service.set_language(CurrentLanguage);
+    ActiveButton.classList.toggle("navbar-language-active", true);
 }
 
 EnglishButton.onclick = () => {
+    ActiveButton.classList.toggle("navbar-language-active", false);
+
     CurrentLanguage = "english";
+    ActiveButton = EnglishButton;
+
     language_service.set_language(CurrentLanguage);
+    ActiveButton.classList.toggle("navbar-language-active", true);
 }
 
 
 // Set Swedish by default
 language_service.when_ready(CurrentLanguage);
 
+// Activate current language
+ActiveButton.classList.toggle("navbar-language-active", true);
+console.log("Active button", ActiveButton);
 
 
 homeIcon.onclick = () => {

@@ -116,16 +116,30 @@
 .navbar-language-container {
   display: flex;
   overflow-x: hidden;
-  overflow-y: visible;
+  overflow-y: hidden;
   flex-direction: row;
-  justify-content: flex-start; }
+  justify-content: flex-start;
+  padding-left: 10px; }
 
 #navbar-language-svenska {
   height: 100%; }
 
 #navbar-language-english {
   height: 100%;
-  padding-left: 10px; }
+  padding-left: 20px; }
+
+.navbar-language {
+  opacity: 0.7; }
+
+.navbar-language:hover {
+  opacity: 1.0;
+  cursor: pointer;
+  transform: scale(1.2);
+  animation: buttonHover 1s; }
+
+.navbar-language-active {
+  opacity: 1;
+  transform: scale(1.2); }
 
 .navbar-icon-container {
   text-align: center; }
@@ -139,7 +153,7 @@
 .navbar-icon:hover {
   cursor: pointer;
   animation: buttonHover 1s;
-  opacity: 0.9;
+  opacity: 1.0;
   transform: scale(1.2); }
 
 .navbar-icon-active {
