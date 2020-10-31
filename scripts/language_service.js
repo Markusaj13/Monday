@@ -35,7 +35,10 @@ class LanguageService {
 
         if (lang != undefined) {
             Object.entries(lang).forEach(([id, text]) => {
-                document.getElementById(id).innerText = text;
+                let obj = document.getElementById(id);
+                if (obj != undefined) {
+                    obj.innerText = text;
+                }
             });
             return true;
         }

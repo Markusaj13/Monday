@@ -36,7 +36,10 @@ class LanguageService {
 
         if (lang != undefined) {
             Object.entries(lang).forEach(([id, text]) => {
-                document.getElementById(id).innerText = text;
+                let obj = document.getElementById(id);
+                if (obj != undefined) {
+                    obj.innerText = text;
+                }
             });
             return true;
         }
@@ -134,12 +137,35 @@ deactivate_active = () => {
 // Actiavte home in start
 activate_home()
 
+const SvenskaButton = document.getElementById("navbar-language-svenska")
+const EnglishButton = document.getElementById("navbar-language-english")
+
+// Create Language Service
+let language_service = new LanguageService();
+var CurrentLanguage = "svenska";
+
+SvenskaButton.onclick = () => {
+    CurrentLanguage = "svenska";
+    language_service.set_language(CurrentLanguage);
+}
+
+EnglishButton.onclick = () => {
+    CurrentLanguage = "english";
+    language_service.set_language(CurrentLanguage);
+}
+
+
+// Set Swedish by default
+language_service.when_ready(CurrentLanguage);
+
+
 
 homeIcon.onclick = () => {
     deactivate_active()
     activate_home()
 
     r.go("/home");
+    language_service.set_language(CurrentLanguage);
 
 }
 
@@ -148,6 +174,7 @@ diyIcon.onclick = () => {
     activate_diy()
 
     r.go("/diy");
+    language_service.set_language(CurrentLanguage);
 }
 
 purchaseIcon.onclick = () => {
@@ -155,20 +182,8 @@ purchaseIcon.onclick = () => {
     activate_purchase()
 
     r.go("/purchase");
+    language_service.set_language(CurrentLanguage);
 }
-
-
-const SvenskaButton = document.getElementById("navbar-language-svenska")
-const EnglishButton = document.getElementById("navbar-language-english")
-
-// Create Language Service
-let language_service = new LanguageService();
-
-SvenskaButton.onclick = () => language_service.set_language("svenska");
-EnglishButton.onclick = () => language_service.set_language("english");
-
-// Set Swedish by default
-language_service.when_ready("svenska");
 
 },{"./language_service":1,"./router.js":3}],3:[function(require,module,exports){
 class Route {
