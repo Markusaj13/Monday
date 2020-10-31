@@ -1,13 +1,18 @@
 /* This file contains SCSS for the main home page layout */
 
+#header-pitch-separator {
+  grid-area: header-pitch-separator;
+}
+
 .home-container {
   display: grid;
   grid-template-areas:
     "header header header"
+    "header-pitch-separator header-pitch-separator header-pitch-separator"
     "left-space pitch right-space";
   grid-gap: 10px;
 
-  grid-template-rows: minmax(160px, 30%) 55%;
+  grid-template-rows: minmax(160px, 30%) minmax(50px, 10%) 50%;
   grid-template-columns: 15% 70% 15%;
   width: 100%;
   overflow: hidden;
@@ -23,13 +28,13 @@
 
 @media only screen and (min-width: 2800px) {
   .home-container {
-    grid-template-rows: minmax(350px, 30%) 55%;
+    grid-template-rows: minmax(350px, 30%) minmax(100px, 10%) 55%;
   }
 }
 
 @media only screen and (max-width: 2800px) and (min-width: 1920px) {
   .home-container {
-    grid-template-rows: minmax(250px, 30%) 55%;
+    grid-template-rows: minmax(250px, 30%) minmax(100px, 10%) 55%;
   }
 }
 

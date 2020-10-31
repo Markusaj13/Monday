@@ -65,10 +65,7 @@ class Router {
 
     when_ready = (url) => {
         let route = this.routes.get(url);
-        console.log("Route ", route);
         if (route != undefined) {
-            console.log("Starting recursion ", route);
-
             // A function that attempts to load the page recursively
             // If it succeeds it returns true, else false.
             let attempt_to_load_page = () => {
