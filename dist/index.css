@@ -115,7 +115,8 @@
 
 .navbar-language-container {
   display: flex;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: visible;
   flex-direction: row;
   justify-content: flex-start; }
 
@@ -131,8 +132,9 @@
 
 .navbar-icon {
   width: auto;
-  height: 100%;
-  opacity: 0.7; }
+  height: 90%;
+  opacity: 0.7;
+  bottom: 0px; }
 
 .navbar-icon:hover {
   cursor: pointer;
@@ -151,11 +153,12 @@
   display: grid;
   grid-template-areas: 'navbar-left-padding homeIcon diyIcon purchaseIcon navbar-language-separator navbar-language-container navbar-right-padding';
   grid-template-columns: 2% 5% 5% 5% 63% 15% 5%;
-  grid-template-rows: 40px;
+  grid-template-rows: 60px;
   grid-area: navbar;
-  margin-top: 1px;
-  overflow: hidden;
-  margin-bottom: 2px;
+  margin-top: 5px;
+  overflow-y: visible;
+  overflow-x: hidden;
+  margin-bottom: 10px;
   width: 100%; }
 
 @media only screen and (max-width: 1080px) and (min-width: 0px) {
