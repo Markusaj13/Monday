@@ -1,18 +1,14 @@
 /* This file contains SCSS for the main home page layout */
 
-#header-pitch-separator {
-  grid-area: header-pitch-separator;
-}
-
 .home-container {
   display: grid;
   grid-template-areas:
-    "header header header"
-    "header-pitch-separator header-pitch-separator header-pitch-separator"
-    "left-space pitch right-space";
+  "header header header"
+  "header-pitch-separator header-pitch-separator header-pitch-separator"
+  "left-space pitch right-space";
   grid-gap: 10px;
 
-  grid-template-rows: minmax(160px, 30%) minmax(50px, 10%) 50%;
+  grid-template-rows: minmax(160px, 30%) minmax(30px, 10%) 50% minmax(40px, 5%);
   grid-template-columns: 15% 70% 15%;
   width: 100%;
   overflow: hidden;

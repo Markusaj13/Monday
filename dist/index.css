@@ -116,7 +116,14 @@
   display: flex;
   overflow: hidden;
   flex-direction: row;
-  justify-content: space-between; }
+  justify-content: flex-start; }
+
+#navbar-language-svenska {
+  height: 100%; }
+
+#navbar-language-english {
+  height: 100%;
+  padding-left: 10px; }
 
 .navbar-icon-container {
   text-align: center; }
@@ -142,7 +149,7 @@
 .navbar {
   display: grid;
   grid-template-areas: 'navbar-left-padding homeIcon diyIcon purchaseIcon navbar-language-separator navbar-language-container navbar-right-padding';
-  grid-template-columns: 2% 5% 5% 5% 63% 10% 10%;
+  grid-template-columns: 2% 5% 5% 5% 63% 15% 5%;
   grid-template-rows: 40px;
   grid-area: navbar;
   padding-top: 10px;
@@ -150,14 +157,11 @@
   padding-bottom: 10px; }
 
 /* This file contains SCSS for the main home page layout */
-#header-pitch-separator {
-  grid-area: header-pitch-separator; }
-
 .home-container {
   display: grid;
   grid-template-areas: "header header header" "header-pitch-separator header-pitch-separator header-pitch-separator" "left-space pitch right-space";
   grid-gap: 10px;
-  grid-template-rows: minmax(160px, 30%) minmax(50px, 10%) 50%;
+  grid-template-rows: minmax(160px, 30%) minmax(30px, 10%) 50% minmax(40px, 5%);
   grid-template-columns: 15% 70% 15%;
   width: 100%;
   overflow: hidden; }
