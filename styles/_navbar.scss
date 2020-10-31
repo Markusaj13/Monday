@@ -89,8 +89,17 @@
   padding-top: 5px;
 }
 
-@media only screen and (max-width: 1080px) and (min-width: 0px) {
+@media only screen and (max-width: 1080px) and (min-width: 700px) {
   .navbar {
     grid-template-columns: 0.1% 15% 15% 15% 15% 35% 1%;
+  }
+}
+@media only screen and (max-width: 699px) and (min-width: 0px) {
+  .navbar {
+    grid-template-columns: 0.1% 15% 15% 15% 5% 45% 1%;
+  }
+
+  .navbar-icon {
+    height: 80%;
   }
 }
