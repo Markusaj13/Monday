@@ -5,7 +5,8 @@
   display: grid;
   justify-content: center;
   grid-template-columns: 30% 30% 30%;
-  margin-top: 3%; }
+  margin-top: 3%;
+  overflow: hidden; }
 
 /* Pitch entry */
 .pitch-entry-icon {
@@ -116,7 +117,14 @@
   display: flex;
   overflow: hidden;
   flex-direction: row;
-  justify-content: space-between; }
+  justify-content: flex-start; }
+
+#navbar-language-svenska {
+  height: 100%; }
+
+#navbar-language-english {
+  height: 100%;
+  padding-left: 10px; }
 
 .navbar-icon-container {
   text-align: center; }
@@ -142,25 +150,30 @@
 .navbar {
   display: grid;
   grid-template-areas: 'navbar-left-padding homeIcon diyIcon purchaseIcon navbar-language-separator navbar-language-container navbar-right-padding';
-  grid-template-columns: 2% 5% 5% 5% 63% 10% 10%;
+  grid-template-columns: 2% 5% 5% 5% 63% 15% 5%;
   grid-template-rows: 40px;
   grid-area: navbar;
   padding-top: 10px;
   overflow: hidden;
-  padding-bottom: 10px; }
+  padding-bottom: 10px;
+  width: 100%; }
 
+@media only screen and (max-width: 1080px) and (min-width: 0px) {
+  .pitch {
+    grid-template-rows: 350px 350px 350px; }
+
+  .navbar {
+    grid-template-columns: 5% 20% 20% 20% 5% 23% 2%; } }
 /* This file contains SCSS for the main home page layout */
-#header-pitch-separator {
-  grid-area: header-pitch-separator; }
-
 .home-container {
   display: grid;
   grid-template-areas: "header header header" "header-pitch-separator header-pitch-separator header-pitch-separator" "left-space pitch right-space";
   grid-gap: 10px;
-  grid-template-rows: minmax(160px, 30%) minmax(50px, 10%) 50%;
+  grid-template-rows: minmax(160px, 30%) minmax(30px, 10%) 50% 50px;
   grid-template-columns: 15% 70% 15%;
   width: 100%;
-  overflow: hidden; }
+  overflow-y: scroll;
+  overflow-x: hidden; }
 
 .left-space {
   grid-area: left-space; }
@@ -170,16 +183,17 @@
 
 @media only screen and (min-width: 2800px) {
   .home-container {
-    grid-template-rows: minmax(350px, 30%) minmax(100px, 10%) 55%; } }
+    grid-template-rows: minmax(350px, 30%) minmax(100px, 10%) 55% 100px; } }
 @media only screen and (max-width: 2800px) and (min-width: 1920px) {
   .home-container {
-    grid-template-rows: minmax(250px, 30%) minmax(100px, 10%) 55%; } }
+    grid-template-rows: minmax(250px, 30%) minmax(100px, 10%) 55% 100px; } }
 @media only screen and (max-width: 1100px) and (min-width: 801px) {
   .home-container {
     grid-template-columns: 1fr 90% 1fr; } }
 @media only screen and (max-width: 800px) and (min-width: 0px) {
   .home-container {
-    grid-template-columns: 1fr 60% 1fr; } }
+    grid-template-columns: 1fr 60% 1fr;
+    grid-template-rows: minmax(160px, 30%) minmax(30px, 10%) 50% 100px; } }
 /* This file contains SCSS for the main home page header */
 .header {
   position: relative;
@@ -268,8 +282,8 @@
 html,
 body {
   margin: 0;
-  height: 100%;
-  width: auto; }
+  width: 100%;
+  height: auto; }
 
 .default-background-color {
   background-color: #e4e3fd;

@@ -2,7 +2,7 @@ var Router = require("./router.js");
 var LanguageService = require("./language_service");
 
 // Creates an instance of our router
-let r = new Router();
+const r = new Router();
 
 const pageContainer = document.getElementById("page-container");
 
@@ -76,7 +76,7 @@ const SvenskaButton = document.getElementById("navbar-language-svenska")
 const EnglishButton = document.getElementById("navbar-language-english")
 
 // Create Language Service
-let language_service = new LanguageService();
+const language_service = new LanguageService();
 var CurrentLanguage = "svenska";
 
 SvenskaButton.onclick = () => {

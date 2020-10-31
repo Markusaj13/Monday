@@ -20,7 +20,7 @@ class Route {
         // since it is available in many browsers by default.
 
         // Create request object
-        let xhr = new XMLHttpRequest();
+        var xhr = new XMLHttpRequest();
 
         // Define function that will deal with response
         xhr.onreadystatechange = (e) => {
@@ -53,7 +53,7 @@ class Router {
     add = (url, html_path, callback) => this.routes.set(url, new Route(url, html_path, callback));
     init = () => this.routes.forEach((route, _) => route.async_load());
     go = (url) => {
-        let route = this.routes.get(url);
+        var route = this.routes.get(url);
 
         if (route != undefined) {
             route.callback(route.html_content);
@@ -64,11 +64,11 @@ class Router {
     }
 
     when_ready = (url) => {
-        let route = this.routes.get(url);
+        var route = this.routes.get(url);
         if (route != undefined) {
             // A function that attempts to load the page recursively
             // If it succeeds it returns true, else false.
-            let attempt_to_load_page = () => {
+            var attempt_to_load_page = () => {
                 // Try to load page
                 console.log("Trying to load")
                 console.log(route.html)

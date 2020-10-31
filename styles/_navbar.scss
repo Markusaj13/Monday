@@ -12,11 +12,20 @@
   display: flex;
   overflow: hidden;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
+}
+
+#navbar-language-svenska {
+  height: 100%;
+}
+
+#navbar-language-english {
+  height: 100%;
+  padding-left: 10px;
 }
 
 .navbar-icon-container { 
-  text-align:center;
+  text-align: center;
 }
 
 .navbar-icon {
@@ -48,10 +57,21 @@
 .navbar {
   display: grid;
   grid-template-areas: 'navbar-left-padding homeIcon diyIcon purchaseIcon navbar-language-separator navbar-language-container navbar-right-padding';
-  grid-template-columns: 2% 5% 5% 5% 63% 10% 10%;
+  grid-template-columns: 2% 5% 5% 5% 63% 15% 5%;
   grid-template-rows: 40px;
   grid-area: navbar;
   padding-top: 10px;
   overflow: hidden;
   padding-bottom: 10px;
+  width: 100%;
+}
+
+@media only screen and (max-width: 1080px) and (min-width: 0px) {
+  .pitch {
+    grid-template-rows: 350px 350px 350px;
+  }
+
+  .navbar {
+    grid-template-columns: 5% 20% 20% 20% 5% 23% 2%;
+  }
 }
