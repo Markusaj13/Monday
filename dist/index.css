@@ -210,7 +210,7 @@
 @media only screen and (max-width: 800px) and (min-width: 0px) {
   .home-container {
     grid-template-columns: 1fr 60% 1fr;
-    grid-template-rows: minmax(160px, 30%) minmax(30px, 10%) 50% 100px; } }
+    grid-template-rows: 160px 50px 800px 100px; } }
 /* This file contains SCSS for the main home page header */
 .header {
   position: relative;

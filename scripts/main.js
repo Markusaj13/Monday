@@ -81,7 +81,13 @@ deactivate_active = () => {
 }
 
 // Actiavte home in start
-activate_home()
+if (InitialPage === "home") {
+    activate_home();
+} else if (InitialPage === "diy") {
+    activate_diy();
+} else if (InitialPage === "purchase") {
+    activate_purchase();
+}
 
 const SvenskaButton = document.getElementById("navbar-language-svenska")
 const EnglishButton = document.getElementById("navbar-language-english")
@@ -99,7 +105,12 @@ if (initial_language != undefined) {
 
 urlParser.set_arg("lang", CurrentLanguage);
 
-var ActiveButton = SvenskaButton;
+var ActiveButton;
+if (CurrentLanguage === "svenska") {
+    ActiveButton = SvenskaButton;
+} else {
+    ActiveButton = EnglishButton;
+}
 
 
 
