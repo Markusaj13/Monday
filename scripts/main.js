@@ -1,14 +1,13 @@
 var Router = require("./router.js");
 var LanguageService = require("./language_service");
+var UrlParser = require("./urlparse");
 
+const urlParser = new UrlParser();
 // Creates an instance of our router
 const r = new Router();
 
 const pageContainer = document.getElementById("page-container");
 
-//const host = window.location.hostname;
-//const port = window.location.port;
-//const protocol = window.location.protocol;
 
 // Adds our paths
 r.add("/home", "html/home.html", (html) => {
@@ -26,6 +25,7 @@ r.add("/purchase", "html/purchase.html", (html) => {
 // Initializes our paths (Loads HTMLs into browser)
 r.init();
 
+urlParser.parse_current_url();
 // Opens /home when it is ready
 r.when_ready("/home");
 
@@ -78,21 +78,36 @@ const EnglishButton = document.getElementById("navbar-language-english")
 // Create Language Service
 const language_service = new LanguageService();
 var CurrentLanguage = "svenska";
+var ActiveButton = SvenskaButton;
+
+
 
 SvenskaButton.onclick = () => {
+    ActiveButton.classList.toggle("navbar-language-active", false);
+
     CurrentLanguage = "svenska";
+    ActiveButton = SvenskaButton;
+
     language_service.set_language(CurrentLanguage);
+    ActiveButton.classList.toggle("navbar-language-active", true);
 }
 
 EnglishButton.onclick = () => {
+    ActiveButton.classList.toggle("navbar-language-active", false);
+
     CurrentLanguage = "english";
+    ActiveButton = EnglishButton;
+
     language_service.set_language(CurrentLanguage);
+    ActiveButton.classList.toggle("navbar-language-active", true);
 }
 
 
 // Set Swedish by default
 language_service.when_ready(CurrentLanguage);
 
+// Activate current language
+ActiveButton.classList.toggle("navbar-language-active", true);
 
 
 homeIcon.onclick = () => {
