@@ -91,7 +91,18 @@ r.init();
 
 urlParser.parse_current_url();
 // Opens /home when it is ready
-r.when_ready("/home");
+const initial_page = urlParser.get_arg("page");
+var InitialPage;
+
+if (initial_page != undefined) {
+    r.when_ready("/" + initial_page);
+    InitialPage = initial_page;
+} else {
+    r.when_ready("/home");
+    InitialPage = "home";
+}
+
+urlParser.set_arg("page", InitialPage);
 
 const homeIcon = document.getElementById("home-icon")
 const diyIcon = document.getElementById("diy-icon")
@@ -141,7 +152,17 @@ const EnglishButton = document.getElementById("navbar-language-english")
 
 // Create Language Service
 const language_service = new LanguageService();
-var CurrentLanguage = "svenska";
+const initial_language = urlParser.get_arg("lang");
+
+var CurrentLanguage = "";
+if (initial_language != undefined) {
+  CurrentLanguage = initial_language;
+} else {
+  CurrentLanguage = "svenska";
+}
+
+urlParser.set_arg("lang", CurrentLanguage);
+
 var ActiveButton = SvenskaButton;
 
 
@@ -154,6 +175,9 @@ SvenskaButton.onclick = () => {
 
     language_service.set_language(CurrentLanguage);
     ActiveButton.classList.toggle("navbar-language-active", true);
+
+    urlParser.set_arg("lang", CurrentLanguage);
+    urlParser.update_history();
 }
 
 EnglishButton.onclick = () => {
@@ -164,6 +188,9 @@ EnglishButton.onclick = () => {
 
     language_service.set_language(CurrentLanguage);
     ActiveButton.classList.toggle("navbar-language-active", true);
+
+    urlParser.set_arg("lang", CurrentLanguage);
+    urlParser.update_history();
 }
 
 
@@ -172,7 +199,6 @@ language_service.when_ready(CurrentLanguage);
 
 // Activate current language
 ActiveButton.classList.toggle("navbar-language-active", true);
-console.log("Active button", ActiveButton);
 
 
 homeIcon.onclick = () => {
@@ -182,6 +208,9 @@ homeIcon.onclick = () => {
     r.go("/home");
     language_service.set_language(CurrentLanguage);
 
+    urlParser.set_arg("page", "home");
+    urlParser.update_history();
+
 }
 
 diyIcon.onclick = () => {
@@ -190,6 +219,9 @@ diyIcon.onclick = () => {
 
     r.go("/diy");
     language_service.set_language(CurrentLanguage);
+
+    urlParser.set_arg("page", "diy");
+    urlParser.update_history();
 }
 
 purchaseIcon.onclick = () => {
@@ -198,7 +230,12 @@ purchaseIcon.onclick = () => {
 
     r.go("/purchase");
     language_service.set_language(CurrentLanguage);
+
+    urlParser.set_arg("page", "purchase");
+    urlParser.update_history();
 }
+
+urlParser.update_history();
 
 },{"./language_service":1,"./router.js":3,"./urlparse":4}],3:[function(require,module,exports){
 class Route {
@@ -297,17 +334,23 @@ module.exports = Router
 },{}],4:[function(require,module,exports){
 class UrlParser {
     constructor() {
+        this.url = undefined;
 
     }
 
     parse_current_url = () => {
-        console.log("Search", window.location.search);
-
+        this.url = new URL(window.location.href);
     }
 
     get_arg = (name) => {
-
+        return this.url.searchParams.get(name);
     }
+
+    set_arg = (name, value) => {
+      this.url.searchParams.set(name, value);
+    }
+
+    update_history = () => window.history.pushState("", "", "?" + this.url.searchParams.toString());
 
 }
 

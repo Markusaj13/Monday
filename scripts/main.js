@@ -27,7 +27,18 @@ r.init();
 
 urlParser.parse_current_url();
 // Opens /home when it is ready
-r.when_ready("/home");
+const initial_page = urlParser.get_arg("page");
+var InitialPage;
+
+if (initial_page != undefined) {
+    r.when_ready("/" + initial_page);
+    InitialPage = initial_page;
+} else {
+    r.when_ready("/home");
+    InitialPage = "home";
+}
+
+urlParser.set_arg("page", InitialPage);
 
 const homeIcon = document.getElementById("home-icon")
 const diyIcon = document.getElementById("diy-icon")
@@ -77,7 +88,17 @@ const EnglishButton = document.getElementById("navbar-language-english")
 
 // Create Language Service
 const language_service = new LanguageService();
-var CurrentLanguage = "svenska";
+const initial_language = urlParser.get_arg("lang");
+
+var CurrentLanguage = "";
+if (initial_language != undefined) {
+    CurrentLanguage = initial_language;
+} else {
+    CurrentLanguage = "svenska";
+}
+
+urlParser.set_arg("lang", CurrentLanguage);
+
 var ActiveButton = SvenskaButton;
 
 
@@ -90,6 +111,9 @@ SvenskaButton.onclick = () => {
 
     language_service.set_language(CurrentLanguage);
     ActiveButton.classList.toggle("navbar-language-active", true);
+
+    urlParser.set_arg("lang", CurrentLanguage);
+    urlParser.update_history();
 }
 
 EnglishButton.onclick = () => {
@@ -100,6 +124,9 @@ EnglishButton.onclick = () => {
 
     language_service.set_language(CurrentLanguage);
     ActiveButton.classList.toggle("navbar-language-active", true);
+
+    urlParser.set_arg("lang", CurrentLanguage);
+    urlParser.update_history();
 }
 
 
@@ -117,6 +144,9 @@ homeIcon.onclick = () => {
     r.go("/home");
     language_service.set_language(CurrentLanguage);
 
+    urlParser.set_arg("page", "home");
+    urlParser.update_history();
+
 }
 
 diyIcon.onclick = () => {
@@ -125,6 +155,9 @@ diyIcon.onclick = () => {
 
     r.go("/diy");
     language_service.set_language(CurrentLanguage);
+
+    urlParser.set_arg("page", "diy");
+    urlParser.update_history();
 }
 
 purchaseIcon.onclick = () => {
@@ -133,4 +166,9 @@ purchaseIcon.onclick = () => {
 
     r.go("/purchase");
     language_service.set_language(CurrentLanguage);
+
+    urlParser.set_arg("page", "purchase");
+    urlParser.update_history();
 }
+
+urlParser.update_history();
