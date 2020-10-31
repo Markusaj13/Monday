@@ -5,7 +5,8 @@
   display: grid;
   justify-content: center;
   grid-template-columns: 30% 30% 30%;
-  margin-top: 3%; }
+  margin-top: 3%;
+  overflow: scroll; }
 
 /* Pitch entry */
 .pitch-entry-icon {
@@ -183,7 +184,8 @@
     grid-template-columns: 1fr 90% 1fr; } }
 @media only screen and (max-width: 800px) and (min-width: 0px) {
   .home-container {
-    grid-template-columns: 1fr 60% 1fr; } }
+    grid-template-columns: 1fr 60% 1fr;
+    grid-template-rows: minmax(160px, 30%) minmax(30px, 10%) 50% 100px; } }
 /* This file contains SCSS for the main home page header */
 .header {
   position: relative;
