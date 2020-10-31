@@ -1,6 +1,6 @@
 {
   "pitch-no-wake-word-title": "Ingen väckningsfras",
-  "pitch-no-wake-word-text": "Friday är en no-wake-word personlig assistent. Friday behöver inte väckas upp av något namn för att börja utföra ting, istället kan Friday hela tiden lyssna efter nyckelfraser och utföra sin uppgift så fort någon sådan fras hörs. Exempelvis kan Friday tända lampor hemma när 'Tänd ljuset' sägs - eller släcka vid 'Släck ljuset'.  Ingen väckningsfras",
+  "pitch-no-wake-word-text": "Friday är en no-wake-word personlig assistent. Friday behöver inte väckas upp av något namn för att börja utföra ting, istället kan Friday hela tiden lyssna efter nyckelfraser och utföra sin uppgift så fort någon sådan fras hörs. Exempelvis kan Friday tända lampor när 'Tänd ljuset' sägs - eller släcka vid 'Släck ljuset'.",
   "pitch-fast-title": "Snabb",
   "pitch-fast-text": "Friday är snabb, friday körs bara på enheten den är installerad på. Internet baserade assistants kan bli tröga vid långsamt internet, inte Friday. Friday reagerar snabbt eftersom dina uttalanden inte behöver skickas till någon extern server för att processeras, allt sker på enheten.",
   "pitch-safe-title": "Säker",
