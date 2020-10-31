@@ -21,7 +21,7 @@
   justify-content: center;
   height: 100%;
   width: 100%;
-  z-index: 999;
+  z-index: 2;
 }
 
 .background-image {
@@ -30,7 +30,7 @@
   background-image: url("../resources/icons/header-background.svg");
   position: absolute;
   opacity: 0.2;
-  z-index: 10;
+  z-index: 1;
 }
 
 @media only screen and (min-width: 2800px) {
