@@ -77,7 +77,7 @@
 @media only screen and (max-width: 500px) and (min-width: 0px) {
   .pitch {
     grid-template-columns: 100%;
-    grid-template-rows: 300px 300px 300px; }
+    grid-template-rows: 300px 350px 300px; }
 
   .pitch-entry {
     grid-template-columns: 15% 85%;
@@ -87,10 +87,10 @@
     padding-top: 2%; } }
 @media only screen and (max-width: 420px) and (min-width: 0px) {
   .pitch-entry-title {
-    font-size: 16pt; } }
-@media only screen and (max-width: 420px) and (min-width: 0px) {
+    font-size: 16pt; }
+
   .pitch {
-    grid-template-rows: 350px 350px 350px; } }
+    grid-template-rows: 350px 400px 350px; } }
 /* This file contains SCSS for the navbar */
 #diy-icon-container {
   grid-area: diyIcon; }
