@@ -6,7 +6,7 @@
   justify-content: center;
   grid-template-columns: 30% 30% 30%;
   margin-top: 3%;
-  overflow: scroll; }
+  overflow: hidden; }
 
 /* Pitch entry */
 .pitch-entry-icon {
@@ -155,7 +155,8 @@
   grid-area: navbar;
   padding-top: 10px;
   overflow: hidden;
-  padding-bottom: 10px; }
+  padding-bottom: 10px;
+  width: 100%; }
 
 /* This file contains SCSS for the main home page layout */
 .home-container {
@@ -165,7 +166,8 @@
   grid-template-rows: minmax(160px, 30%) minmax(30px, 10%) 50% minmax(40px, 5%);
   grid-template-columns: 15% 70% 15%;
   width: 100%;
-  overflow: hidden; }
+  overflow-y: scroll;
+  overflow-x: hidden; }
 
 .left-space {
   grid-area: left-space; }
@@ -274,8 +276,8 @@
 html,
 body {
   margin: 0;
-  height: 100%;
-  width: auto; }
+  width: 100%;
+  height: auto; }
 
 .default-background-color {
   background-color: #e4e3fd;

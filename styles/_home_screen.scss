@@ -11,7 +11,8 @@
   grid-template-rows: minmax(160px, 30%) minmax(30px, 10%) 50% minmax(40px, 5%);
   grid-template-columns: 15% 70% 15%;
   width: 100%;
-  overflow: hidden;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .left-space {
