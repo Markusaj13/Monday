@@ -1,18 +1,76 @@
 (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
+class LanguageService {
+    constructor() {
+        this.languages = new Map();
+
+
+        console.log("Getting stuff");
+        this.get_language_file("data/language/svenska.json", "svenska");
+        this.get_language_file("data/language/english.json", "english");
+    }
+
+    get_language_file = (url, name) => {
+        // Create request object
+        let xhr = new XMLHttpRequest();
+
+        // Define function that will deal with response
+        xhr.onreadystatechange = (e) => {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                this.languages.set(name, JSON.parse(xhr.responseText));
+            }
+        }
+
+        // Open request to file
+        xhr.open("GET", url);
+
+        // Set header that says we expect a html text response
+        xhr.setRequestHeader('Content-type', 'application/json');
+
+        // Send request
+        xhr.send();
+    }
+
+    set_language = (name) => {
+
+        let lang = this.languages.get(name);
+
+        if (lang != undefined) {
+            Object.entries(lang).forEach(([id, text]) => {
+                document.getElementById(id).innerText = text;
+            });
+            return true;
+        }
+
+        console.log("No such language: " + name);
+        return false;
+
+    }
+
+    when_ready = (name) => {
+        let attempt_to_set_language = () => {
+            // Try to load page
+            if (!this.set_language(name))
+                setTimeout(attempt_to_set_language, 100);
+        }
+        attempt_to_set_language();
+    }
+
+}
+
+module.exports = LanguageService
+
+},{}],2:[function(require,module,exports){
 var Router = require("./router.js");
+var LanguageService = require("./language_service");
 
 // Creates an instance of our router
 let r = new Router();
 
 const pageContainer = document.getElementById("page-container");
 
-const host = window.location.hostname;
-const port = window.location.port;
-const protocol = window.location.protocol;
-
-console.log("Host", host);
-console.log("Port", port);
-console.log("Protocol", protocol);
+//const host = window.location.hostname;
+//const port = window.location.port;
+//const protocol = window.location.protocol;
 
 // Adds our paths
 r.add("/home", "html/home.html", (html) => {
@@ -76,6 +134,7 @@ deactivate_active = () => {
 // Actiavte home in start
 activate_home()
 
+
 homeIcon.onclick = () => {
     deactivate_active()
     activate_home()
@@ -98,7 +157,20 @@ purchaseIcon.onclick = () => {
     r.go("/purchase");
 }
 
-},{"./router.js":2}],2:[function(require,module,exports){
+
+const SvenskaButton = document.getElementById("navbar-language-svenska")
+const EnglishButton = document.getElementById("navbar-language-english")
+
+// Create Language Service
+let language_service = new LanguageService();
+
+SvenskaButton.onclick = () => language_service.set_language("svenska");
+EnglishButton.onclick = () => language_service.set_language("english");
+
+// Set Swedish by default
+language_service.when_ready("svenska");
+
+},{"./language_service":1,"./router.js":3}],3:[function(require,module,exports){
 class Route {
     constructor(url_path, html_path, callback) {
         /*
@@ -166,10 +238,7 @@ class Router {
 
     when_ready = (url) => {
         let route = this.routes.get(url);
-        console.log("Route ", route);
         if (route != undefined) {
-            console.log("Starting recursion ", route);
-
             // A function that attempts to load the page recursively
             // If it succeeds it returns true, else false.
             let attempt_to_load_page = () => {
@@ -195,4 +264,4 @@ class Router {
 
 module.exports = Router
 
-},{}]},{},[1]);
+},{}]},{},[2]);

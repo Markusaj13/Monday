@@ -1,6 +1,7 @@
 /* This file contains SCSS for the main home page header */
 
 .header {
+  position: relative;
   grid-area: header;
   background: linear-gradient(
     170deg,
@@ -14,10 +15,22 @@
 }
 
 .header-text {
+  position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: center;
   height: 100%;
+  width: 100%;
+  z-index: 999;
+}
+
+.background-image {
+  height: 100%;
+  width: 100%;
+  background-image: url("../resources/icons/header-background.svg");
+  position: absolute;
+  opacity: 0.2;
+  z-index: 10;
 }
 
 @media only screen and (min-width: 2800px) {

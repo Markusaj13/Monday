@@ -1,0 +1,8 @@
+{
+  "pitch-no-wake-word-title": "No Wakeup Phrase",
+  "pitch-no-wake-word-text": "Friday is a no-wake-word voice assistant. Friday does not need to be woken up by a name to execute tasks - Instead Friday works by always listening for keywords to perform actions, for a more seamless experience.",
+  "pitch-fast-title": "Fast",
+  "pitch-fast-text": "Friday is fast - This is achieved because Friday runs on-device and does not need to communicate with some server that would incur latency. Because Friday is offline it works quickly even in places with poor internet connection.",
+  "pitch-safe-title": "Secure",
+  "pitch-safe-text": "Friday cares about your right to own your personal data. Friday does not send your voice anywhere, Friday works only on-device and you can therefore rest safe that noone is listening in."
+}

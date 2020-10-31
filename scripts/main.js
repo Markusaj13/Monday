@@ -1,4 +1,5 @@
 var Router = require("./router.js");
+var LanguageService = require("./language_service");
 
 // Creates an instance of our router
 let r = new Router();
@@ -71,6 +72,7 @@ deactivate_active = () => {
 // Actiavte home in start
 activate_home()
 
+
 homeIcon.onclick = () => {
     deactivate_active()
     activate_home()
@@ -92,3 +94,16 @@ purchaseIcon.onclick = () => {
 
     r.go("/purchase");
 }
+
+
+const SvenskaButton = document.getElementById("navbar-language-svenska")
+const EnglishButton = document.getElementById("navbar-language-english")
+
+// Create Language Service
+let language_service = new LanguageService();
+
+SvenskaButton.onclick = () => language_service.set_language("svenska");
+EnglishButton.onclick = () => language_service.set_language("english");
+
+// Set Swedish by default
+language_service.when_ready("svenska");

@@ -106,6 +106,18 @@
 #navbar-right-padding {
   grid-area: navbar-right-padding; }
 
+#navbar-language-separator {
+  grid-area: navbar-language-separator; }
+
+#navbar-language-container {
+  grid-area: navbar-language-container; }
+
+.navbar-language-container {
+  display: flex;
+  overflow: hidden;
+  flex-direction: row;
+  justify-content: space-between; }
+
 .navbar-icon-container {
   text-align: center; }
 
@@ -129,8 +141,8 @@
     transform: scale(1.2); } }
 .navbar {
   display: grid;
-  grid-template-areas: 'navbar-left-padding homeIcon diyIcon purchaseIcon navbar-right-padding';
-  grid-template-columns: 40% 6% 6% 6% 40%;
+  grid-template-areas: 'navbar-left-padding homeIcon diyIcon purchaseIcon navbar-language-separator navbar-language-container navbar-right-padding';
+  grid-template-columns: 2% 5% 5% 5% 63% 10% 10%;
   grid-template-rows: 40px;
   grid-area: navbar;
   padding-top: 10px;
@@ -138,11 +150,14 @@
   padding-bottom: 10px; }
 
 /* This file contains SCSS for the main home page layout */
+#header-pitch-separator {
+  grid-area: header-pitch-separator; }
+
 .home-container {
   display: grid;
-  grid-template-areas: "header header header" "left-space pitch right-space";
+  grid-template-areas: "header header header" "header-pitch-separator header-pitch-separator header-pitch-separator" "left-space pitch right-space";
   grid-gap: 10px;
-  grid-template-rows: minmax(160px, 30%) 55%;
+  grid-template-rows: minmax(160px, 30%) minmax(50px, 10%) 50%;
   grid-template-columns: 15% 70% 15%;
   width: 100%;
   overflow: hidden; }
@@ -155,10 +170,10 @@
 
 @media only screen and (min-width: 2800px) {
   .home-container {
-    grid-template-rows: minmax(350px, 30%) 55%; } }
+    grid-template-rows: minmax(350px, 30%) minmax(100px, 10%) 55%; } }
 @media only screen and (max-width: 2800px) and (min-width: 1920px) {
   .home-container {
-    grid-template-rows: minmax(250px, 30%) 55%; } }
+    grid-template-rows: minmax(250px, 30%) minmax(100px, 10%) 55%; } }
 @media only screen and (max-width: 1100px) and (min-width: 801px) {
   .home-container {
     grid-template-columns: 1fr 90% 1fr; } }
@@ -167,16 +182,28 @@
     grid-template-columns: 1fr 60% 1fr; } }
 /* This file contains SCSS for the main home page header */
 .header {
+  position: relative;
   grid-area: header;
   background: linear-gradient(170deg, #ffbc00 10%, #ff8000 50%, #ff2e00 100%);
   text-align: center;
   font-size: 50pt; }
 
 .header-text {
+  position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100%; }
+  height: 100%;
+  width: 100%;
+  z-index: 999; }
+
+.background-image {
+  height: 100%;
+  width: 100%;
+  background-image: url("../resources/icons/header-background.svg");
+  position: absolute;
+  opacity: 0.2;
+  z-index: 10; }
 
 @media only screen and (min-width: 2800px) {
   .header {

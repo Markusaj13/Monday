@@ -5,6 +5,15 @@
 #purchase-icon-container { grid-area: purchaseIcon; }
 #navbar-left-padding { grid-area: navbar-left-padding; }
 #navbar-right-padding { grid-area: navbar-right-padding; }
+#navbar-language-separator { grid-area: navbar-language-separator; }
+#navbar-language-container { grid-area: navbar-language-container; }
+
+.navbar-language-container {
+  display: flex;
+  overflow: hidden;
+  flex-direction: row;
+  justify-content: space-between;
+}
 
 .navbar-icon-container { 
   text-align:center;
@@ -38,8 +47,8 @@
 
 .navbar {
   display: grid;
-  grid-template-areas: 'navbar-left-padding homeIcon diyIcon purchaseIcon navbar-right-padding';
-  grid-template-columns: 40% 6% 6% 6% 40%;
+  grid-template-areas: 'navbar-left-padding homeIcon diyIcon purchaseIcon navbar-language-separator navbar-language-container navbar-right-padding';
+  grid-template-columns: 2% 5% 5% 5% 63% 10% 10%;
   grid-template-rows: 40px;
   grid-area: navbar;
   padding-top: 10px;
