@@ -10,7 +10,6 @@
 
 .navbar-language-container {
   overflow: hidden;
-  padding-right: 15px;
   display: flex;
   justify-content: end;
 }
@@ -21,7 +20,6 @@
 
 #navbar-language-english {
   height: 100%;
-  padding-left: 20px;
 };
 
 .navbar-language {
@@ -85,5 +83,33 @@
   position: relative;
   padding-bottom: 3px;
   padding-top: 5px;
+}
+
+@media only screen and (min-width: 415px) {
+  .navbar-language-container {
+    padding-right: 15px;
+    flex-direction: row;
+  }
+
+  #navbar-language-english {
+    padding-left: 20px;
+  }
+}
+
+@media only screen and (max-width: 415px) and (min-width: 0px) {
+  .navbar-language-container {
+    flex-direction: row;
+    padding-right: 15px;
+  }
+
+  #navbar-language-english {
+    padding-left: 20px;
+    height: 50%;
+  }
+
+  #navbar-language-svenska {
+    padding-left: 20px;
+    height: 50%;
+  }
 }
 
