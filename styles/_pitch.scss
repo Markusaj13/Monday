@@ -6,9 +6,10 @@
   /* This places all the pitch-entries in pitch on a row  */
   display: grid;
   justify-content: center;
-  grid-template-columns: 30% 30% 30%;
-  margin-top: 3%;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: max-content;
   overflow: hidden;
+  grid-column-gap: 20px;
   
 }
 
@@ -36,23 +37,24 @@
 
 .pitch-entry-text {
   grid-area: pitch-entry-text;
-  padding-top: 10%;
   hyphens: auto;
 
   white-space: normal;
   word-break: break-word;
 
+  margin-bottom: 30px;
+
   /*overflow-wrap: break-word; */
 }
 
 .pitch-entry {
+  grid-row-gap: 20px;
   display: grid;
   grid-template-areas:
     "pitch-entry-icon pitch-entry-title"
     "pitch-entry-text pitch-entry-text";
 
-  grid-template-columns: 25% 65%;
-  grid-template-rows: 25% 75%;
+  grid-template-columns: 35% 65%;
 }
 
 @media only screen and (min-width: 2800px) {
@@ -73,55 +75,21 @@
   }
 }
 
-@media only screen and (max-width: 800px) and (min-width: 651px) {
-  .pitch {
-    grid-template-columns: 100%;
-    grid-template-rows: 200px 200px 200px;
-  }
-  .pitch-entry {
-    grid-template-columns: 15% 85%;
-    grid-template-rows: 25% 75%;
-  }
-  .pitch-entry-text {
-    padding-top: 2%;
-  }
-}
-
-@media only screen and (max-width: 650px) and (min-width: 501px) {
-  .pitch {
-    grid-template-columns: 100%;
-    grid-template-rows: 250px 250px 250px;
-  }
-  .pitch-entry {
-    grid-template-columns: 15% 85%;
-    grid-template-rows: 25% 75%;
+@media only screen and (max-width: 800px) and (min-width: 0px) {
+  //Here we make it stack as columns
+  .pitch { 
+    grid-template-columns: 100%; 
+    grid-template-rows: 1fr 1fr 1fr;
   }
 
-  .pitch-entry-text {
-    padding-top: 2%;
-  }
-}
-
-@media only screen and (max-width: 500px) and (min-width: 0px) {
-  .pitch {
-    grid-template-columns: 100%;
-    grid-template-rows: 300px 350px 300px;
-  }
   .pitch-entry {
     grid-template-columns: 15% 85%;
-    grid-template-rows: 25% 75%;
-  }
-  .pitch-entry-text {
-    padding-top: 2%;
   }
 }
 
 @media only screen and (max-width: 420px) and (min-width: 0px) {
   .pitch-entry-title {
     font-size: 16pt;
-  }
-  .pitch {
-    grid-template-rows: 350px 400px 500px;
   }
 }
 

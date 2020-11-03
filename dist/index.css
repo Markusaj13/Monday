@@ -4,9 +4,10 @@
   /* This places all the pitch-entries in pitch on a row  */
   display: grid;
   justify-content: center;
-  grid-template-columns: 30% 30% 30%;
-  margin-top: 3%;
-  overflow: hidden; }
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: max-content;
+  overflow: hidden;
+  grid-column-gap: 20px; }
 
 /* Pitch entry */
 .pitch-entry-icon {
@@ -28,17 +29,17 @@
 
 .pitch-entry-text {
   grid-area: pitch-entry-text;
-  padding-top: 10%;
   hyphens: auto;
   white-space: normal;
   word-break: break-word;
+  margin-bottom: 30px;
   /*overflow-wrap: break-word; */ }
 
 .pitch-entry {
+  grid-row-gap: 20px;
   display: grid;
   grid-template-areas: "pitch-entry-icon pitch-entry-title" "pitch-entry-text pitch-entry-text";
-  grid-template-columns: 25% 65%;
-  grid-template-rows: 25% 75%; }
+  grid-template-columns: 35% 65%; }
 
 @media only screen and (min-width: 2800px) {
   .pitch-entry-title {
@@ -52,45 +53,16 @@
 
   .pitch-entry-text {
     font-size: 25pt; } }
-@media only screen and (max-width: 800px) and (min-width: 651px) {
+@media only screen and (max-width: 800px) and (min-width: 0px) {
   .pitch {
     grid-template-columns: 100%;
-    grid-template-rows: 200px 200px 200px; }
+    grid-template-rows: 1fr 1fr 1fr; }
 
   .pitch-entry {
-    grid-template-columns: 15% 85%;
-    grid-template-rows: 25% 75%; }
-
-  .pitch-entry-text {
-    padding-top: 2%; } }
-@media only screen and (max-width: 650px) and (min-width: 501px) {
-  .pitch {
-    grid-template-columns: 100%;
-    grid-template-rows: 250px 250px 250px; }
-
-  .pitch-entry {
-    grid-template-columns: 15% 85%;
-    grid-template-rows: 25% 75%; }
-
-  .pitch-entry-text {
-    padding-top: 2%; } }
-@media only screen and (max-width: 500px) and (min-width: 0px) {
-  .pitch {
-    grid-template-columns: 100%;
-    grid-template-rows: 300px 350px 300px; }
-
-  .pitch-entry {
-    grid-template-columns: 15% 85%;
-    grid-template-rows: 25% 75%; }
-
-  .pitch-entry-text {
-    padding-top: 2%; } }
+    grid-template-columns: 15% 85%; } }
 @media only screen and (max-width: 420px) and (min-width: 0px) {
   .pitch-entry-title {
-    font-size: 16pt; }
-
-  .pitch {
-    grid-template-rows: 350px 400px 500px; } }
+    font-size: 16pt; } }
 /* This file contains SCSS for the navbar */
 #diy-icon-container {
   grid-area: diyIcon; }
@@ -114,12 +86,10 @@
   grid-area: navbar-language-container; }
 
 .navbar-language-container {
+  overflow: hidden;
+  padding-right: 15px;
   display: flex;
-  overflow-x: hidden;
-  overflow-y: hidden;
-  flex-direction: row;
-  justify-content: flex-start;
-  padding-left: 10px; }
+  justify-content: end; }
 
 #navbar-language-svenska {
   height: 100%; }
@@ -165,28 +135,19 @@
     transform: scale(1.2); } }
 .navbar {
   display: grid;
-  grid-template-areas: 'navbar-left-padding homeIcon diyIcon purchaseIcon navbar-language-separator navbar-language-container navbar-right-padding';
-  grid-template-columns: 2% 5% 5% 5% 63% 15% 5%;
+  grid-template-areas: 'homeIcon diyIcon purchaseIcon navbar-language-container';
+  grid-template-columns: 60px 60px 60px 1fr;
   grid-template-rows: 60px;
+  grid-column-gap: 10px;
   grid-area: navbar;
   margin-top: 5px;
-  overflow-y: visible;
-  overflow-x: hidden;
+  overflow: hidden;
   margin-bottom: 5px;
   width: 100%;
   position: relative;
   padding-bottom: 3px;
   padding-top: 5px; }
 
-@media only screen and (max-width: 1080px) and (min-width: 700px) {
-  .navbar {
-    grid-template-columns: 0.1% 15% 15% 15% 15% 35% 1%; } }
-@media only screen and (max-width: 699px) and (min-width: 0px) {
-  .navbar {
-    grid-template-columns: 0.1% 15% 15% 15% 5% 45% 1%; }
-
-  .navbar-icon {
-    height: 80%; } }
 /* This file contains SCSS for the main home page layout */
 .home-container {
   display: grid;

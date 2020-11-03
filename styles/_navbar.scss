@@ -9,12 +9,10 @@
 #navbar-language-container { grid-area: navbar-language-container; }
 
 .navbar-language-container {
+  overflow: hidden;
+  padding-right: 15px;
   display: flex;
-  overflow-x: hidden;
-  overflow-y: hidden;
-  flex-direction: row;
-  justify-content: flex-start;
-  padding-left: 10px;
+  justify-content: end;
 }
 
 #navbar-language-svenska {
@@ -75,13 +73,13 @@
 
 .navbar {
   display: grid;
-  grid-template-areas: 'navbar-left-padding homeIcon diyIcon purchaseIcon navbar-language-separator navbar-language-container navbar-right-padding';
-  grid-template-columns: 2% 5% 5% 5% 63% 15% 5%;
+  grid-template-areas: 'homeIcon diyIcon purchaseIcon navbar-language-container';
+  grid-template-columns: 60px 60px 60px 1fr;
   grid-template-rows: 60px;
+  grid-column-gap: 10px;
   grid-area: navbar;
   margin-top: 5px;
-  overflow-y: visible;
-  overflow-x: hidden;
+  overflow: hidden;
   margin-bottom: 5px;
   width: 100%;
   position: relative;
@@ -89,17 +87,3 @@
   padding-top: 5px;
 }
 
-@media only screen and (max-width: 1080px) and (min-width: 700px) {
-  .navbar {
-    grid-template-columns: 0.1% 15% 15% 15% 15% 35% 1%;
-  }
-}
-@media only screen and (max-width: 699px) and (min-width: 0px) {
-  .navbar {
-    grid-template-columns: 0.1% 15% 15% 15% 5% 45% 1%;
-  }
-
-  .navbar-icon {
-    height: 80%;
-  }
-}
