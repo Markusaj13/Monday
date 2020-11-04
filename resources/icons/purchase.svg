@@ -19,6 +19,18 @@
      id="defs4092">
     <linearGradient
        inkscape:collect="always"
+       id="linearGradient865">
+      <stop
+         style="stop-color:#ff0000;stop-opacity:1"
+         offset="0"
+         id="stop861" />
+      <stop
+         style="stop-color:#ffff00;stop-opacity:1"
+         offset="1"
+         id="stop863" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
        id="linearGradient5123">
       <stop
          style="stop-color:#ffdd55;stop-opacity:1"
@@ -29,33 +41,12 @@
          offset="1"
          id="stop5121" />
     </linearGradient>
-    <linearGradient
-       inkscape:collect="always"
-       id="linearGradient5117">
-      <stop
-         style="stop-color:#ffcc00;stop-opacity:1"
-         offset="0"
-         id="stop5113" />
-      <stop
-         style="stop-color:#ff0000;stop-opacity:1"
-         offset="1"
-         id="stop5115" />
-    </linearGradient>
     <rect
        x="47.625"
        y="-381"
        width="148.16667"
        height="84.666664"
        id="rect5101" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient5117"
-       id="linearGradient5111"
-       x1="33.851128"
-       y1="-388.05679"
-       x2="119.22932"
-       y2="-342.69965"
-       gradientUnits="userSpaceOnUse" />
     <linearGradient
        inkscape:collect="always"
        xlink:href="#linearGradient5123"
@@ -66,6 +57,15 @@
        y2="-468.40747"
        gradientUnits="userSpaceOnUse"
        gradientTransform="matrix(3.2731669,-1.8897638,1.8897638,3.2731669,921.00658,37.243181)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient865"
+       id="linearGradient867"
+       x1="258.44315"
+       y1="-259.29166"
+       x2="-80.223534"
+       y2="-497.41666"
+       gradientUnits="userSpaceOnUse" />
   </defs>
   <sodipodi:namedview
      id="base"
@@ -74,16 +74,16 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.68149425"
-     inkscape:cx="349.83891"
-     inkscape:cy="514.81738"
+     inkscape:zoom="0.48188921"
+     inkscape:cx="18.6923"
+     inkscape:cy="691.16014"
      inkscape:document-units="mm"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="g5250"
      inkscape:document-rotation="0"
      showgrid="true"
      inkscape:window-width="1920"
      inkscape:window-height="1017"
-     inkscape:window-x="-8"
+     inkscape:window-x="1912"
      inkscape:window-y="-8"
      inkscape:window-maximized="1">
     <inkscape:grid
@@ -100,7 +100,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -183,7 +183,7 @@
            transform="scale(0.26458333)" />
       </g>
       <rect
-         style="fill:#1a2836;stroke:#d40536;stroke-width:0;stroke-opacity:0.39759"
+         style="fill:url(#linearGradient867);stroke:#d40536;stroke-width:0;stroke-opacity:0.39759;fill-opacity:1"
          id="rect4663"
          width="238.125"
          height="153.45836"
@@ -209,13 +209,13 @@
       <text
          xml:space="preserve"
          id="text5099"
-         style="font-style:normal;font-weight:normal;font-size:35.2778px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect5101);fill:url(#linearGradient5111);fill-opacity:1;stroke:none;"
+         style="font-style:normal;font-weight:normal;font-size:35.2778px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect5101);fill:#202325;fill-opacity:1;stroke:none;"
          x="27.957666"
          y="0"
          transform="matrix(1.9833322,0,0,1.9833322,-45.971365,367.47888)"><tspan
            x="47.625"
            y="-345.90584"><tspan
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:35.2778px;font-family:'Bernard MT Condensed';-inkscape-font-specification:'Bernard MT Condensed, ';text-align:start;text-anchor:start;fill:url(#linearGradient5111);fill-opacity:1">DDIY</tspan></tspan></text>
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:35.2778px;font-family:'Bernard MT Condensed';-inkscape-font-specification:'Bernard MT Condensed, ';text-align:start;text-anchor:start;fill:#202325;fill-opacity:1">DDIY</tspan></tspan></text>
     </g>
   </g>
 </svg>

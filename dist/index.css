@@ -56,28 +56,29 @@
   .pitch-entry-text {
     font-size: 3vw; } }
 /* This file contains SCSS for the navbar */
-#diy-icon-container {
-  grid-area: diyIcon; }
-
 #home-icon-container {
-  grid-area: homeIcon; }
+  grid-area: home-icon-container; }
 
-#purchase-icon-container {
-  grid-area: purchaseIcon; }
+#navbar-icon-container {
+  grid-area: navbar-icon-container;
+  text-align: center; }
 
 #navbar-language-container {
   grid-area: navbar-language-container; }
 
 .navbar-language-container {
   overflow: hidden;
-  display: flex;
-  justify-content: flex-end; }
+  text-align: right; }
 
 #navbar-language-svenska {
-  height: 100%; }
+  width: 60px;
+  height: 100%;
+  margin-right: 15px; }
 
 #navbar-language-english {
-  height: 100%; }
+  width: 60px;
+  height: 100%;
+  margin-right: 15px; }
 
 .navbar-language {
   opacity: 0.7; }
@@ -92,14 +93,24 @@
   opacity: 1;
   transform: scale(1.2); }
 
-.navbar-icon-container {
-  text-align: center; }
+.home-icon-container {
+  text-align: left; }
+
+#home-icon {
+  margin-left: 15px;
+  width: 60px;
+  height: 90%;
+  opacity: 0.7; }
 
 .navbar-icon {
-  width: auto;
-  height: 90%;
-  opacity: 0.7;
-  bottom: 0px; }
+  opacity: 0.7; }
+
+.navbar-middle-icon {
+  width: 100px;
+  height: 100px; }
+
+#diy-icon {
+  margin-right: 20px; }
 
 .navbar-icon:hover {
   cursor: pointer;
@@ -116,37 +127,28 @@
     transform: scale(1.2); } }
 .navbar {
   display: grid;
-  grid-template-areas: 'homeIcon diyIcon purchaseIcon navbar-language-container';
-  grid-template-columns: 60px 60px 60px 1fr;
-  grid-template-rows: 60px;
-  grid-column-gap: 10px;
+  grid-template-areas: 'home-icon-container navbar-icon-container navbar-language-container';
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 110px;
   grid-area: navbar;
-  margin-top: 5px;
   overflow: hidden;
-  margin-bottom: 5px;
   width: 100%;
   position: relative;
   padding-bottom: 3px;
-  padding-top: 5px; }
+  padding-top: 5px;
+  background-color: #202325; }
 
 @media only screen and (min-width: 415px) {
   .navbar-language-container {
-    padding-right: 15px;
+    flex-direction: row; } }
+@media only screen and (max-width: 415px) and (min-width: 0px) {
+  .navbar-language-container {
     flex-direction: row; }
 
   #navbar-language-english {
-    padding-left: 20px; } }
-@media only screen and (max-width: 415px) and (min-width: 0px) {
-  .navbar-language-container {
-    flex-direction: row;
-    padding-right: 15px; }
-
-  #navbar-language-english {
-    padding-left: 20px;
     height: 50%; }
 
   #navbar-language-svenska {
-    padding-left: 20px;
     height: 50%; } }
 /* This file contains SCSS for the main home page layout */
 .home-container {
@@ -156,7 +158,7 @@
   grid-template-rows: minmax(160px, 30%) minmax(30px, 10%) 50% 50px;
   grid-template-columns: 15% 70% 15%;
   width: 100%;
-  overflow-y: scroll;
+  overflow-y: hidden;
   overflow-x: hidden; }
 
 .left-space {
@@ -214,7 +216,7 @@
   width: 100%;
   padding-bottom: 20px;
   padding-top: 20px;
-  background-color: #e4e3fd;
+  background-color: #202325;
   overflow: hidden;
   font-weight: bolder;
   z-index: 3; }
@@ -222,13 +224,14 @@
 .footer a {
   display: inline-block;
   text-decoration: none;
-  color: #34495e;
+  color: #cfcbc4;
   padding: 14px 16px;
-  border-radius: 10px; }
+  border-radius: 10px;
+  font-size: 1vw; }
 
 .footer a:hover {
   background: linear-gradient(170deg, rgba(255, 188, 0, 0.75) 10%, rgba(255, 128, 0, 0.75) 50%, rgba(255, 46, 0, 0.75) 100%);
-  color: #233547;
+  color: #202325;
   animation-name: footerKnappAnimation;
   animation-duration: 0.25s;
   transform: scale(1.1); }
@@ -236,21 +239,18 @@
 @keyframes footerKnappAnimation {
   0% {
     transform: scale(1);
-    color: #233547; }
+    color: #202325; }
   100% {
     transform: scale(1.1);
-    color: #233547; } }
-@media only screen and (min-width: 2800px) {
-  .footer a {
-    font-size: 20pt; } }
+    color: #202325; } }
 html,
 body {
   margin: 0;
   width: 100%;
-  background-color: #e4e3fd; }
+  background-color: #202325; }
 
 .default-background-color {
-  background-color: #e4e3fd;
+  background-color: #202325;
   /*background-color: rgba(52, 73, 94, 1);*/ }
 
 .monday-foreground-color {
@@ -258,10 +258,8 @@ body {
 
 .monday-header-text {
   font-family: "Russo One", sans-serif;
-  color: #1a2836; }
+  color: #202325; }
 
 .monday-text {
   font-family: "Source Sans Pro", sans-serif;
-  color: #1a2836; }
-
-/*# sourceMappingURL=index.css.map */
+  color: #cfcbc4; }

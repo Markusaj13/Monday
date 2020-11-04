@@ -9,11 +9,14 @@ html,
 body {
   margin: 0;
   width: 100%;
-  background-color: rgb(228, 227, 253);
+
+background-color:  #202325;
+  //background-color: rgb(228, 227, 253);
 }
 
 .default-background-color {
-  background-color: rgb(228, 227, 253);
+  background-color:  #202325;
+  //background-color: rgb(228, 227, 253);
   /*background-color: rgba(52, 73, 94, 1);*/
 }
 
@@ -23,10 +26,12 @@ body {
 
 .monday-header-text {
   font-family: "Russo One", sans-serif;
-  color: rgb(26, 40, 54);
+  color: #202325;
+  //color: rgb(26, 40, 54);
 }
 
 .monday-text {
   font-family: "Source Sans Pro", sans-serif;
-  color: rgb(26, 40, 54);
+  color: #cfcbc4;
+  //color: rgb(26, 40, 54);
 }

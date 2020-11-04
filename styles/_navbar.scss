@@ -1,23 +1,30 @@
 /* This file contains SCSS for the navbar */
 
-#diy-icon-container { grid-area: diyIcon; }
-#home-icon-container { grid-area: homeIcon; }
-#purchase-icon-container { grid-area: purchaseIcon; }
+#home-icon-container { grid-area: home-icon-container;}
+#navbar-icon-container{ 
+  grid-area: navbar-icon-container;
+  text-align: center;
+}
 #navbar-language-container { grid-area: navbar-language-container; }
 
 .navbar-language-container {
   overflow: hidden;
-  display: flex;
-  justify-content: flex-end;
+  //display: flex;
+  //justify-content: flex-end;
+  text-align: right;
 }
 
 #navbar-language-svenska {
+  width: 60px;
   height: 100%;
+  margin-right: 15px;
 }
 
 #navbar-language-english {
+  width: 60px;
   height: 100%;
-};
+  margin-right: 15px;
+}
 
 .navbar-language {
   opacity: 0.7;
@@ -35,15 +42,28 @@
   transform: scale(1.2);
 }
 
-.navbar-icon-container { 
-  text-align: center;
+.home-icon-container { 
+  text-align: left;
+}
+
+#home-icon {
+  margin-left: 15px;
+  width: 60px;
+  height: 90%;
+  opacity: 0.7;
 }
 
 .navbar-icon {
-  width: auto;
-  height: 90%;
   opacity: 0.7;
-  bottom: 0px;
+}
+
+.navbar-middle-icon{
+  width: 100px;
+  height: 100px;
+}
+
+#diy-icon{
+  margin-right: 20px;
 }
 
 .navbar-icon:hover {
@@ -68,44 +88,45 @@
 
 .navbar {
   display: grid;
-  grid-template-areas: 'homeIcon diyIcon purchaseIcon navbar-language-container';
-  grid-template-columns: 60px 60px 60px 1fr;
-  grid-template-rows: 60px;
-  grid-column-gap: 10px;
+  grid-template-areas: 'home-icon-container navbar-icon-container navbar-language-container';
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 110px;
   grid-area: navbar;
-  margin-top: 5px;
+ // margin-top: 5px;
   overflow: hidden;
-  margin-bottom: 5px;
+ // margin-bottom: 5px;
   width: 100%;
   position: relative;
   padding-bottom: 3px;
   padding-top: 5px;
+  background-color: #202325;
+  //background-color: #1a2836;
 }
 
 @media only screen and (min-width: 415px) {
   .navbar-language-container {
-    padding-right: 15px;
+    //padding-right: 15px;
     flex-direction: row;
   }
 
   #navbar-language-english {
-    padding-left: 20px;
+    //padding-left: 20px;
   }
 }
 
 @media only screen and (max-width: 415px) and (min-width: 0px) {
   .navbar-language-container {
     flex-direction: row;
-    padding-right: 15px;
+    //padding-right: 15px;
   }
 
   #navbar-language-english {
-    padding-left: 20px;
+    //padding-left: 20px;
     height: 50%;
   }
 
   #navbar-language-svenska {
-    padding-left: 20px;
+    //padding-left: 20px;
     height: 50%;
   }
 }
