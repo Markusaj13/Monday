@@ -80,7 +80,7 @@
 .navbar-language-container {
   overflow: hidden;
   display: flex;
-  justify-content: end; }
+  justify-content: flex-end; }
 
 #navbar-language-svenska {
   height: 100%; }
