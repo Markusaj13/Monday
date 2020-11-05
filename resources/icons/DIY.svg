@@ -5,6 +5,7 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="211.05717mm"
@@ -16,6 +17,42 @@
    sodipodi:docname="DIY.svg">
   <defs
      id="defs1869">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient919">
+      <stop
+         style="stop-color:#ffff00;stop-opacity:1"
+         offset="0"
+         id="stop915" />
+      <stop
+         style="stop-color:#ff0000;stop-opacity:1"
+         offset="1"
+         id="stop917" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient913">
+      <stop
+         style="stop-color:#ffff00;stop-opacity:1"
+         offset="0"
+         id="stop909" />
+      <stop
+         style="stop-color:#ff0000;stop-opacity:1"
+         offset="1"
+         id="stop911" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient901">
+      <stop
+         style="stop-color:#ffff00;stop-opacity:1"
+         offset="0"
+         id="stop897" />
+      <stop
+         style="stop-color:#ff0000;stop-opacity:1"
+         offset="1"
+         id="stop899" />
+    </linearGradient>
     <rect
        x="60"
        y="30"
@@ -127,6 +164,33 @@
            d="m 90.203339,-104.7948 h 15.000001 v 15 H 90.203339 Z" />
       </g>
     </clipPath>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient901"
+       id="linearGradient903"
+       x1="152.0356"
+       y1="6.7073083"
+       x2="202.69135"
+       y2="196.66635"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient919"
+       id="linearGradient905"
+       x1="152.0356"
+       y1="6.7073083"
+       x2="202.69135"
+       y2="196.66635"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient913"
+       id="linearGradient907"
+       x1="118.86065"
+       y1="-28.956934"
+       x2="166.26233"
+       y2="148.79936"
+       gradientUnits="userSpaceOnUse" />
   </defs>
   <sodipodi:namedview
      id="base"
@@ -136,10 +200,10 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.70710678"
-     inkscape:cx="351.07031"
-     inkscape:cy="337.31164"
+     inkscape:cx="484.00022"
+     inkscape:cy="391.61407"
      inkscape:document-units="mm"
-     inkscape:current-layer="g2525"
+     inkscape:current-layer="g3196"
      inkscape:document-rotation="0"
      showgrid="true"
      inkscape:window-width="1920"
@@ -164,7 +228,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -211,9 +275,9 @@
            id="g2513"
            clip-path="url(#clipPath2515)"
            inkscape:path-effect="#path-effect2519"
-           style="fill:#1a2836;fill-opacity:1">
+           style="fill:url(#linearGradient905);fill-opacity:1">
           <path
-             style="fill:#1a2836;fill-opacity:1;stroke:#d40536;stroke-width:0;stroke-opacity:0.39759"
+             style="fill:url(#linearGradient905);fill-opacity:1.0;stroke:#d40536;stroke-width:0;stroke-opacity:0.39759"
              id="rect2442"
              width="22.500002"
              height="67.5"
@@ -226,7 +290,7 @@
              sodipodi:type="rect" />
         </g>
         <rect
-           style="fill:#294156;fill-opacity:1;stroke:#d40536;stroke-width:0;stroke-opacity:0.39759"
+           style="fill:#202325;fill-opacity:1;stroke:#d40536;stroke-width:0;stroke-opacity:0.39759"
            id="rect2527"
            width="3"
            height="25.999996"
@@ -234,7 +298,7 @@
            y="152.5"
            ry="2.826081" />
         <rect
-           style="fill:#294156;fill-opacity:1;stroke:#d40536;stroke-width:0;stroke-opacity:0.39759"
+           style="fill:#202325;fill-opacity:1;stroke:#d40536;stroke-width:0;stroke-opacity:0.39759"
            id="rect2527-7"
            width="3"
            height="25.999996"
@@ -242,7 +306,7 @@
            y="152.5"
            ry="2.826081" />
         <rect
-           style="fill:#294156;fill-opacity:1;stroke:#d40536;stroke-width:0;stroke-opacity:0.39759"
+           style="fill:#202325;fill-opacity:1;stroke:#d40536;stroke-width:0;stroke-opacity:0.39759"
            id="rect2527-7-0"
            width="3"
            height="25.999996"
@@ -250,7 +314,7 @@
            y="152.5"
            ry="2.826081" />
         <rect
-           style="fill:#3f6382;fill-opacity:1;stroke:#d40536;stroke-width:0;stroke-opacity:0.39759"
+           style="fill:#666666;fill-opacity:1;stroke:#d40536;stroke-width:0;stroke-opacity:0.39759"
            id="rect2527-9"
            width="1.999999"
            height="23.999998"
@@ -258,7 +322,7 @@
            y="153.5"
            ry="2.60869" />
         <rect
-           style="fill:#3f6382;fill-opacity:1;stroke:#d40536;stroke-width:0;stroke-opacity:0.39759"
+           style="fill:#666666;fill-opacity:1;stroke:#d40536;stroke-width:0;stroke-opacity:0.39759"
            id="rect2527-9-5"
            width="1.999999"
            height="23.999998"
@@ -266,7 +330,7 @@
            y="153.5"
            ry="2.60869" />
         <rect
-           style="fill:#3f6382;fill-opacity:1;stroke:#d40536;stroke-width:0;stroke-opacity:0.39759"
+           style="fill:#666666;fill-opacity:1;stroke:#d40536;stroke-width:0;stroke-opacity:0.39759"
            id="rect2527-9-6"
            width="1.999999"
            height="23.999998"
@@ -274,7 +338,7 @@
            y="153.5"
            ry="2.60869" />
         <rect
-           style="fill:#1a2836;fill-opacity:1;stroke:#d40536;stroke-width:0;stroke-opacity:0.39759"
+           style="fill:url(#linearGradient903);fill-opacity:1;stroke:#d40536;stroke-width:0;stroke-opacity:0.39759"
            id="rect2595"
            width="7.5"
            height="7.5"
@@ -296,13 +360,13 @@
       <text
          xml:space="preserve"
          id="text3198"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.4px;line-height:1.25;font-family:'Bernard MT Condensed';-inkscape-font-specification:'Bernard MT Condensed, ';text-align:center;white-space:pre;shape-inside:url(#rect3200);fill:#1a2836;fill-opacity:1;stroke:none"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.4px;line-height:1.25;font-family:'Bernard MT Condensed';-inkscape-font-specification:'Bernard MT Condensed, ';text-align:center;white-space:pre;shape-inside:url(#rect3200);fill:url(#linearGradient907);fill-opacity:1;stroke:none;"
          x="6.847105"
          y="0"
          transform="matrix(1.2657779,-1.2657779,1.2657779,1.2657779,-142.84451,206.37082)"><tspan
            x="125.83125"
            y="55.267778"><tspan
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.4px;font-family:'Bernard MT Condensed';-inkscape-font-specification:'Bernard MT Condensed, ';text-align:center;text-anchor:middle;fill:#1a2836;fill-opacity:1">DIY</tspan></tspan></text>
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.4px;font-family:'Bernard MT Condensed';-inkscape-font-specification:'Bernard MT Condensed, ';text-align:center;text-anchor:middle;fill:url(#linearGradient907);fill-opacity:1">DIY</tspan></tspan></text>
     </g>
   </g>
 </svg>
