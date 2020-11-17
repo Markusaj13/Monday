@@ -118,7 +118,7 @@
 .navbar {
   display: grid;
   grid-template-areas: 'navbar-home-container navbar-burger-container';
-  grid-template-columns: 5fr 1fr;
+  grid-template-columns: 1fr 1fr;
 }
 
 .navbar-home-container { }
@@ -136,6 +136,13 @@
   justify-content: center;
 }
 
+.navbar-burger-right-align {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding-right: 5vw;
+}
+
 #navbar-burger-icon:hover {
   cursor: pointer;
 }
@@ -149,4 +156,3 @@
   flex-direction: row;
 }
 }
-
