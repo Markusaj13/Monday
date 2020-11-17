@@ -8,7 +8,8 @@
   grid-template-rows: 1fr 1fr;
   overflow: hidden;
   grid-column-gap: 20px;
-  grid-row-gap: 20px; }
+  grid-row-gap: 20px;
+  margin-bottom: 2.5vw; }
 
 /* Pitch entry */
 .pitch-entry-icon {
@@ -45,7 +46,7 @@
 @media only screen and (max-width: 800px) and (min-width: 0px) {
   .pitch {
     grid-template-columns: 100%;
-    margin-bottom: 30px; }
+    margin-bottom: 8vw; }
 
   .pitch-entry-icon-image {
     width: 15vw;
@@ -234,6 +235,7 @@
   position: fixed;
   bottom: 0px;
   width: 100%;
+  height: 2.5vw;
   padding-bottom: 20px;
   padding-top: 20px;
   background-color: #202325;
@@ -270,7 +272,10 @@
     color: #cfcbc4;
     padding: 14px 16px;
     border-radius: 10px;
-    font-size: 4vw; } }
+    font-size: 4vw; }
+
+  .footer {
+    height: 8vw; } }
 html,
 body {
   margin: 0;
@@ -291,5 +296,3 @@ body {
 .monday-text {
   font-family: "Source Sans Pro", sans-serif;
   color: #cfcbc4; }
-
-/*# sourceMappingURL=index.css.map */
