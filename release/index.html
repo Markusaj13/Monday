@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Friday Voice Assistant</title>
+    <link rel="icon" 
+          type="image/svg" 
+          href="/resources/icons/Logo_LuiX/logo_LuiX.svg">
+    <link rel="stylesheet" href="dist/index.css">
+    <link rel="stylesheet" href="dist/index.css.map">
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+  </head>
+
+  <body class="default-background-color">
+    <div id="mobile-modal-container" class="mobile-modal-container-inactive">
+      <div id="mobile-modal-content" class="mobile-modal-content">
+        <div id="mobile-modal-language-container">
+          <div class="mobile-modal-language-left-padding"></div>
+          <img id="mobile-modal-navbar-language-svenska" class="mobile-modal-navbar-language" src="resources/icons/sweden.svg" alt="home"> 
+          <img id="mobile-modal-navbar-language-english" class="mobile-modal-navbar-language" src="resources/icons/united-kingdom.svg" alt="home"> 
+          <div class="mobile-modal-language-right-padding"></div>
+        </div>
+        <div id="mobile-modal-icon-container">
+          <div class="mobile-modal-icon-top-padding"></div>
+          <div class="mobile-modal-icon-left-padding"></div>
+          <img id="mobile-modal-home-icon" class="mobile-modal-navbar-icon" src="resources/icons//home.svg" alt="home"> 
+          <img id="mobile-modal-diy-icon" class="mobile-modal-navbar-icon" src="resources/icons/DIY.svg" alt="diy">
+          <img id="mobile-modal-purchase-icon" class="mobile-modal-navbar-icon" src="resources/icons/purchase.svg" alt="purchase"> 
+          <div class="mobile-modal-icon-right-padding"></div>
+          <div class="mobile-modal-icon-bottom-padding"></div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="navbar">
+      <div id="navbar-home-container" class="navbar-home-container">
+        <img id="luix-icon" class="navbar-luix-icon" src="resources/icons/Logo_LuiX/logo_LuiX_website.svg" alt="home"> 
+      </div>
+      <div id="navbar-icon-container" class="navbar-icon-container"> 
+        <img id="home-icon" class="navbar-icon navbar-middle-icon" src="resources/icons//home.svg" alt="home"> 
+        <img id="diy-icon" class="navbar-icon navbar-middle-icon" src="resources/icons/DIY.svg" alt="diy">
+        <img id="purchase-icon" class="navbar-icon navbar-middle-icon" src="resources/icons/purchase.svg" alt="purchase"> 
+      </div>
+
+      <div id="navbar-language-container" class="navbar-language-container"> 
+        <img id="navbar-language-svenska" class="navbar-language" src="resources/icons/sweden.svg" alt="home"> 
+        <img id="navbar-language-english" class="navbar-language" src="resources/icons/united-kingdom.svg" alt="home"> 
+      </div>
+
+      <div id="navbar-burger-container" class="navbar-burger-container"> 
+        <div class="navbar-burger-right-align">
+          <img id="navbar-burger-icon" class="navbar-burger" src="resources/icons/hamburger.svg" alt="burger"> 
+        </div>
+      </div>
+    </div>
+
+    <!--All pages will be loaded into this div-->
+    <div id="page-container"> </div>
+
+    <div class="footer">
+      <div class="footer-contact"><a href="mailto:luixinquiries@gmail.com">Contact</a> </div>
+      <div class="footer-github"><a href="https://github.com/JonasRSV/friday-voice-assistant">Github</a></div>
+      <div class="footer-about"><a href="#About">About</a></div>
+    </div>
+
+    <script src="dist/index.js"></script>
+  </body>
+
+</html>
