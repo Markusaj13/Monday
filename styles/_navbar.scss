@@ -4,6 +4,7 @@
 #navbar-icon-container{ 
   grid-area: navbar-icon-container;
   text-align: center;
+  margin-top: 7px;
 }
 #navbar-language-container { grid-area: navbar-language-container; }
 
@@ -58,8 +59,8 @@
 }
 
 .navbar-middle-icon{
-  width: 100px;
-  height: 100px;
+  width: 90px;
+  height: 90px;
 }
 
 #diy-icon{

@@ -43,10 +43,26 @@
   grid-template-areas: "pitch-entry-icon pitch-entry-title" "pitch-entry-text pitch-entry-text";
   grid-template-columns: 5vw 1fr; }
 
+@media only screen and (max-width: 1100px) and (min-width: 801px) {
+  .pitch {
+    margin-bottom: 12vw; }
+
+  .pitch-entry-icon-image {
+    width: 8vw;
+    height: unset; }
+
+  .pitch-entry {
+    grid-template-columns: 8vw 1fr; }
+
+  .pitch-entry-title {
+    font-size: 3vw; }
+
+  .pitch-entry-text {
+    font-size: 2vw; } }
 @media only screen and (max-width: 800px) and (min-width: 0px) {
   .pitch {
     grid-template-columns: 100%;
-    margin-bottom: 8vw; }
+    margin-bottom: 16vw; }
 
   .pitch-entry-icon-image {
     width: 15vw;
@@ -71,7 +87,8 @@
 
 #navbar-icon-container {
   grid-area: navbar-icon-container;
-  text-align: center; }
+  text-align: center;
+  margin-top: 7px; }
 
 #navbar-language-container {
   grid-area: navbar-language-container; }
@@ -116,8 +133,8 @@
   opacity: 0.7; }
 
 .navbar-middle-icon {
-  width: 100px;
-  height: 100px; }
+  width: 90px;
+  height: 90px; }
 
 #diy-icon {
   margin-right: 20px; }
@@ -177,7 +194,7 @@
   display: grid;
   grid-template-areas: "header header header" "header-pitch-separator header-pitch-separator header-pitch-separator" "left-space pitch right-space";
   grid-gap: 10px;
-  grid-template-rows: minmax(160px, 30%) minmax(30px, 10%) 50% 50px;
+  grid-template-rows: minmax(160px, 30%) minmax(30px, 10%) max-content;
   grid-template-columns: 15% 70% 15%;
   width: 100%;
   overflow-y: hidden;
@@ -265,17 +282,16 @@
   100% {
     transform: scale(1.1);
     color: #202325; } }
-@media only screen and (max-width: 800px) and (min-width: 0px) {
-  .footer a {
-    display: inline-block;
-    text-decoration: none;
-    color: #cfcbc4;
-    padding: 14px 16px;
-    border-radius: 10px;
-    font-size: 4vw; }
-
+@media only screen and (max-width: 1100px) and (min-width: 801px) {
   .footer {
-    height: 8vw; } }
+    height: 6vw; }
+    .footer a {
+      font-size: 4vw; } }
+@media only screen and (max-width: 800px) and (min-width: 0px) {
+  .footer {
+    height: 8vw; }
+    .footer a {
+      font-size: 4vw; } }
 html,
 body {
   margin: 0;
