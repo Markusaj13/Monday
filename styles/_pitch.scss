@@ -59,10 +59,35 @@
 }
 
 
+@media only screen and (max-width: 1100px) and (min-width: 801px) {
+  .pitch { 
+    margin-bottom: 12vw;
+  }
+  
+  .pitch-entry-icon-image {
+    width: 8vw;
+    height: unset;
+  }
+
+  .pitch-entry {
+    grid-template-columns: 8vw 1fr;
+  
+  }
+
+  .pitch-entry-title {
+    font-size: 3vw;
+  }
+
+  .pitch-entry-text {
+    font-size: 2vw;
+  }
+}
+
+
 @media only screen and (max-width: 800px) and (min-width: 0px) {
   .pitch { 
     grid-template-columns: 100%; 
-    margin-bottom: 8vw;
+    margin-bottom: 16vw;
   }
 
   .pitch-entry-icon-image {
