@@ -66,19 +66,37 @@
   .pitch-entry-text {
     font-size: 3vw; } }
 /* This file contains SCSS for the navbar */
-#home-icon-container {
-  grid-area: home-icon-container; }
+#navbar-home-container {
+  grid-area: navbar-home-container; }
 
 #navbar-icon-container {
-  grid-area: navbar-icon-container;
-  text-align: center; }
+  grid-area: navbar-icon-container; }
 
 #navbar-language-container {
   grid-area: navbar-language-container; }
 
+.navbar {
+  display: grid;
+  grid-template-areas: 'navbar-home-container navbar-icon-container navbar-language-container';
+  grid-template-columns: 4fr 1fr 4fr;
+  grid-template-rows: 110px;
+  grid-area: navbar;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  padding-bottom: 3px;
+  padding-top: 5px;
+  background-color: #202325; }
+
 .navbar-language-container {
   overflow: hidden;
   text-align: right; }
+
+.navbar-icon-container {
+  display: grid;
+  grid-column-gap: 20px;
+  grid-template-columns: repeat(3, 80px);
+  margin-top: 20px; }
 
 #navbar-language-svenska {
   width: 60px;
@@ -103,21 +121,12 @@
   opacity: 1;
   transform: scale(1.2); }
 
-.home-icon-container {
-  text-align: left; }
-
-#home-icon {
-  margin-left: 15px;
-  width: 60px;
-  height: 90%;
-  opacity: 0.7; }
-
 .navbar-icon {
   opacity: 0.7; }
 
 .navbar-middle-icon {
-  width: 100px;
-  height: 100px; }
+  width: 80px;
+  height: 80px; }
 
 #diy-icon {
   margin-right: 20px; }
@@ -135,43 +144,18 @@
 @keyframes buttonHover {
   100% {
     transform: scale(1.2); } }
-.navbar {
-  display: grid;
-  grid-template-areas: 'home-icon-container navbar-icon-container navbar-language-container';
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 110px;
-  grid-area: navbar;
-  overflow: hidden;
-  width: 100%;
-  position: relative;
-  padding-bottom: 3px;
-  padding-top: 5px;
-  background-color: #202325; }
-
 @media only screen and (max-width: 800px) and (min-width: 0px) {
-  .navbar-middle-icon {
-    width: 70px;
-    height: 70px; }
+  .navbar-icon-container {
+    display: none; }
+
+  .navbar-language-container {
+    display: none; }
 
   .navbar {
     grid-template-columns: 1fr 2fr 1fr; }
 
-  #home-icon {
-    margin-left: 10px;
-    width: 70px;
-    height: 70px; }
-
-  #diy-icon {
-    margin-right: 10px; }
-
   .navbar-language-container {
-    flex-direction: row; }
-
-  #navbar-language-english {
-    height: 50%; }
-
-  #navbar-language-svenska {
-    height: 50%; } }
+    flex-direction: row; } }
 /* This file contains SCSS for the main home page layout */
 .home-container {
   display: grid;
@@ -296,3 +280,5 @@ body {
 .monday-text {
   font-family: "Source Sans Pro", sans-serif;
   color: #cfcbc4; }
+
+/*# sourceMappingURL=index.css.map */
