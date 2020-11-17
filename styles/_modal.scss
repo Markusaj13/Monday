@@ -1,0 +1,135 @@
+.mobile-modal-container-inactive {
+  display: none;
+}
+
+@media only screen and (max-width: 800px) and (min-width: 0px) {
+.mobile-modal-container-active {
+  display: unset;
+  position: fixed;
+  z-index: 4;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(10, 10, 10, 0.5);
+}
+
+.mobile-modal-content {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  background-color: #202325;
+  right: 0px;
+  display: grid;
+
+  grid-template-areas: 
+    "mobile-modal-language-container"
+    "mobile-modal-icon-container";
+
+  grid-template-rows: 1fr 9fr;
+
+  animation: modal-slide-in 0.3s;
+}
+
+@keyframes modal-slide-in {
+  from { 
+    right: -50%;
+    opacity: 0.0;
+  }
+
+  to {
+    right: 0px;
+    opacity: 1.0;
+  }
+}
+
+#mobile-modal-home-icon {
+  grid-area: mobile-modal-home-icon
+}
+
+#mobile-modal-diy-icon {
+  grid-area: mobile-modal-diy-icon
+}
+
+#mobile-modal-purchase-icon {
+  grid-area: mobile-modal-purchase-icon
+}
+
+#mobile-modal-icon-bottom-padding { 
+  grid-area: mobile-modal-icon-bottom-padding
+}
+
+#mobile-modal-icon-top-padding { 
+  grid-area: mobile-modal-icon-top-padding
+}
+
+#mobile-modal-icon-left-padding { 
+  grid-area: mobile-modal-icon-left-padding
+}
+
+#mobile-modal-icon-right-padding { 
+  grid-area: mobile-modal-icon-right-padding
+}
+
+#mobile-modal-language-left-padding {
+  grid-area: mobile-modal-language-left-padding
+}
+
+#mobile-modal-language-right-padding {
+  grid-area: mobile-modal-language-right-padding
+}
+
+#mobile-modal-navbar-language-svenska {
+  grid-area: mobile-modal-navbar-language-svenska
+}
+
+#mobile-modal-navbar-language-english {
+  grid-area: mobile-modal-navbar-language-english
+}
+
+
+#mobile-modal-language-container {
+  grid-area: mobile-modal-language-container;
+  display: grid;
+  grid-template-areas: "mobile-modal-language-left-padding mobile-modal-navbar-language-svenska mobile-modal-navbar-language-english mobile-modal-navbar-right-padding";
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-column-gap: 20px;
+}
+
+$mobile-modal-navbar-icon-size: 20vw;
+
+#mobile-modal-icon-container {
+  grid-area: mobile-modal-icon-container;
+  display: grid;
+
+  grid-template-areas: 
+  "mobile-modal-icon-top-padding mobile-modal-icon-top-padding mobile-modal-icon-top-padding"
+  "mobile-modal-icon-left-padding mobile-modal-home-icon mobile-modal-icon-right-padding"
+  "mobile-modal-icon-left-padding mobile-modal-diy-icon mobile-modal-icon-right-padding"
+  "mobile-modal-icon-left-padding mobile-modal-purchase-icon mobile-modal-icon-right-padding"
+  "mobile-modal-icon-bottom-padding mobile-modal-icon-bottom-padding mobile-modal-icon-bottom-padding";
+
+  grid-template-columns: 2fr 1fr 2fr;
+  grid-template-rows: 20px $mobile-modal-navbar-icon-size $mobile-modal-navbar-icon-size $mobile-modal-navbar-icon-size 1fr;
+  grid-row-gap: $mobile-modal-navbar-icon-size / 2.5;
+
+}
+
+.mobile-modal-navbar-icon {
+  width: $mobile-modal-navbar-icon-size;
+  height: $mobile-modal-navbar-icon-size;
+}
+
+.mobile-modal-navbar-icon:hover {
+  cursor: pointer;
+}
+
+.mobile-modal-navbar-language {
+  width: 60px;
+  height: 60px;
+}
+
+.mobile-modal-navbar-language:hover {
+  cursor: pointer;
+}
+
+
+}

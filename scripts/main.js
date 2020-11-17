@@ -43,7 +43,17 @@ urlParser.set_arg("page", InitialPage);
 const homeIcon = document.getElementById("home-icon")
 const diyIcon = document.getElementById("diy-icon")
 const purchaseIcon = document.getElementById("purchase-icon")
+
+const mobileModalHomeIcon = document.getElementById("mobile-modal-home-icon")
+const mobileModalDiyIcon = document.getElementById("mobile-modal-diy-icon")
+const mobileModalPurchaseIcon = document.getElementById("mobile-modal-purchase-icon")
+
+
 const luixIcon = document.getElementById("luix-icon")
+
+const hamburgerIcon = document.getElementById("navbar-burger-icon")
+const mobileModal = document.getElementById("mobile-modal-container")
+const mobileModalContent = document.getElementById("mobile-modal-content")
 
 
 var activeIcon = null
@@ -93,6 +103,9 @@ if (InitialPage === "home") {
 const SvenskaButton = document.getElementById("navbar-language-svenska")
 const EnglishButton = document.getElementById("navbar-language-english")
 
+const MobileModalSvenskaButton = document.getElementById("mobile-modal-navbar-language-svenska")
+const MobileModalEnglishButton = document.getElementById("mobile-modal-navbar-language-english")
+
 // Create Language Service
 const language_service = new LanguageService();
 const initial_language = urlParser.get_arg("lang");
@@ -113,9 +126,14 @@ if (CurrentLanguage === "svenska") {
     ActiveButton = EnglishButton;
 }
 
+onModalIconClick = (onClickHander) => {
+  return () => {
+    onClickHander()
+    deactivateModal()
+  }
+}
 
-
-SvenskaButton.onclick = () => {
+onSvenskaButtonClick = () => {
     ActiveButton.classList.toggle("navbar-language-active", false);
 
     CurrentLanguage = "svenska";
@@ -128,7 +146,7 @@ SvenskaButton.onclick = () => {
     urlParser.update_history();
 }
 
-EnglishButton.onclick = () => {
+onEnglishButtonClick = () => {
     ActiveButton.classList.toggle("navbar-language-active", false);
 
     CurrentLanguage = "english";
@@ -139,7 +157,14 @@ EnglishButton.onclick = () => {
 
     urlParser.set_arg("lang", CurrentLanguage);
     urlParser.update_history();
+
 }
+
+SvenskaButton.onclick = onSvenskaButtonClick
+EnglishButton.onclick = onEnglishButtonClick
+
+MobileModalSvenskaButton.onclick = onModalIconClick(onSvenskaButtonClick)
+MobileModalEnglishButton.onclick = onModalIconClick(onEnglishButtonClick)
 
 
 // Set Swedish by default
@@ -149,8 +174,8 @@ language_service.when_ready(CurrentLanguage);
 ActiveButton.classList.toggle("navbar-language-active", true);
 
 
-onhomeClick = () => {
-    console.log("Clicked on me")
+onHomeClick = () => {
+  console.log("Clicked on DIY")
     deactivate_active()
     activate_home()
 
@@ -161,10 +186,8 @@ onhomeClick = () => {
     urlParser.update_history();
 }
 
-homeIcon.onclick = onhomeClick
-luixIcon.onclick = onhomeClick
-
-diyIcon.onclick = () => {
+onDiyClick = () => {
+  console.log("Clicked on DIY")
     deactivate_active()
     activate_diy()
 
@@ -175,7 +198,8 @@ diyIcon.onclick = () => {
     urlParser.update_history();
 }
 
-purchaseIcon.onclick = () => {
+onPurchaseClick = () => {
+  console.log("Clicked on purchase")
     deactivate_active()
     activate_purchase()
 
@@ -185,6 +209,33 @@ purchaseIcon.onclick = () => {
     urlParser.set_arg("page", "purchase");
     urlParser.update_history();
 }
+
+homeIcon.onclick = onHomeClick
+luixIcon.onclick = onHomeClick
+diyIcon.onclick = onDiyClick
+purchaseIcon.onclick = onPurchaseClick
+
+activateModal = () => {
+  mobileModal.classList.toggle("mobile-modal-container-active", true)
+  mobileModal.classList.toggle("mobile-modal-container-inactive", false)
+}
+
+deactivateModal = () => {
+  mobileModal.classList.toggle("mobile-modal-container-active", false)
+  mobileModal.classList.toggle("mobile-modal-container-inactive", true)
+}
+
+hamburgerIcon.onclick = activateModal
+mobileModal.onclick = deactivateModal
+
+mobileModalContent.onclick = (e) => {
+  e.stopPropagation();
+}
+
+
+mobileModalHomeIcon.onclick = onModalIconClick(onHomeClick)
+mobileModalDiyIcon.onclick = onModalIconClick(onDiyClick)
+mobileModalPurchaseIcon.onclick = onModalIconClick(onPurchaseClick)
 
 
 urlParser.update_history();
