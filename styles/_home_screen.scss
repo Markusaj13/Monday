@@ -8,7 +8,7 @@
   "left-space pitch right-space";
   grid-gap: 10px;
 
-  grid-template-rows: minmax(160px, 30%) minmax(30px, 10%) 50% 50px;
+  grid-template-rows: minmax(160px, 30%) minmax(30px, 10%) max-content;
   grid-template-columns: 15% 70% 15%;
   width: 100%;
   overflow-y: hidden;
