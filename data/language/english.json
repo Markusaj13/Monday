@@ -1,8 +1,14 @@
 {
-  "pitch-no-wake-word-title": "No Wakeup",
-  "pitch-no-wake-word-text": "Friday is a wake-word-less voice assistant. Friday is always listening for key phrases - For example with Friday you can control your lights at home by only uttering 'lights on' or 'lights off'. By bypassing the wake-up step we hope to provide a more seamless voice interface experience.",
+  "pitch-wake-title": "Awake",
+  "pitch-wake-text": "Friday is always awake and ready to do what you ask.",
   "pitch-fast-title": "Fast",
-  "pitch-fast-text": "Friday is fast - Friday only runs on-device, meaning all latency incurred by internet communication is avoided. From our 2-sample UX study we have been able to conclude that quick response times are essential for a good user experience - Something which Friday is great at providing! Because Friday is an offline Assistant it also works well in areas where internet connection is poor or non-existant.",
-  "pitch-safe-title": "Privacy",
-  "pitch-safe-text": "Friday cares about your right to own your personal data - Since Friday works only on-device your data is sent nowhere - Fridays memory length varies from version to version, but no matter what version: Friday will never retain the audio for longer than 10 seconds - The reason why Friday retains Audio at all is because it searches this buffer for utterances."
+  "pitch-fast-text": "Friday is implemented on device making it lightning fast",
+  "pitch-safe-title": "Safe",
+  "pitch-safe-text": "Friday does not send your voice to some server for processing - Your right to privacy is important to us",
+  "pitch-adjustable-title": "Adjustable",
+  "pitch-adjustable-text": "You can teach friday to understand whatever you want!",
+  "pitch-reliable-title": "Reliable",
+  "pitch-reliable-text": "As long as the device is not broken - Friday will work, No internet no problem!",
+  "pitch-offline-title": "Offline",
+  "pitch-offline-text": "Friday does not need to be connected and can be brought anywhere!"
 }

@@ -1,8 +1,14 @@
 {
-  "pitch-no-wake-word-title": "Ingen väckningsfras",
-  "pitch-no-wake-word-text": "Friday är en no-wake-word personlig assistent. Friday behöver inte väckas upp av något namn för att börja utföra ting, istället kan Friday hela tiden lyssna efter nyckelfraser och utföra sin uppgift så fort någon sådan fras hörs. Exempelvis kan Friday tända lampor när 'Tänd ljuset' sägs - eller släcka vid 'Släck ljuset'.",
+  "pitch-wake-title": "Vaken",
+  "pitch-wake-text": "Friday är alltid vaken, redo och behöver inte väckas av någon fras.",
   "pitch-fast-title": "Snabb",
-  "pitch-fast-text": "Friday är snabb, friday körs bara på enheten den är installerad på. Internet baserade assistants kan bli tröga vid långsamt internet, inte Friday. Friday reagerar snabbt eftersom dina uttalanden inte behöver skickas till någon extern server för att processeras, allt sker på enheten.",
+  "pitch-fast-text": "Hela friday ligger på teknikprylen, det gör den blixtsnabb",
   "pitch-safe-title": "Säker",
-  "pitch-safe-text": "Friday värnar om din rätt att äga din egen data. Friday körs bara på enheten den är installerad på, din röst skickas inte till något måln. Dessutom så sparar friday endast de senaste 10 sekunderna av inspelningen. Så efter att 10 sekunder har gått är allt som tidigare sagts överskrivet och borta för alltid."
+  "pitch-safe-text": "Med Friday så skickas inte din röst någonstans - Din rätt till att äga din egen data är viktig för oss.",
+  "pitch-adjustable-title": "Anpassningsbar",
+  "pitch-adjustable-text": "Du kan lära Friday att känna igen just de kommandona du vill.",
+  "pitch-reliable-title": "Pålitlig",
+  "pitch-reliable-text": "Friday fungerar så länge teknikprylen är hel - Inget internet inget problem!",
+  "pitch-offline-title": "Offline",
+  "pitch-offline-text": "Friday använder sig inte av internet - Allt som behövs finns I teknikprylen - Den kan tas med överallt!"
 }

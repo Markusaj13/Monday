@@ -69,12 +69,12 @@
 .navbar-icon:hover {
   cursor: pointer;
   animation: buttonHover 1s;
-  opacity: 1.0;
+  opacity: 1.0 !important;
   transform: scale(1.2);
 }
 
 .navbar-icon-active {
-  opacity: 1;
+  opacity: 1 !important;
   transform: scale(1.2);
 }
 
@@ -103,30 +103,35 @@
   //background-color: #1a2836;
 }
 
-@media only screen and (min-width: 415px) {
-  .navbar-language-container {
-    //padding-right: 15px;
-    flex-direction: row;
-  }
-
-  #navbar-language-english {
-    //padding-left: 20px;
-  }
+@media only screen and (max-width: 800px) and (min-width: 0px) {
+.navbar-middle-icon{
+  width: 70px;
+  height: 70px;
 }
 
-@media only screen and (max-width: 415px) and (min-width: 0px) {
+.navbar {
+  grid-template-columns: 1fr 2fr 1fr;
+}
+
+#home-icon {
+  margin-left: 10px;
+  width:  70px;
+  height: 70px;
+}
+
+#diy-icon{
+  margin-right: 10px;
+}
+
   .navbar-language-container {
     flex-direction: row;
-    //padding-right: 15px;
   }
 
   #navbar-language-english {
-    //padding-left: 20px;
     height: 50%;
   }
 
   #navbar-language-svenska {
-    //padding-left: 20px;
     height: 50%;
   }
 }

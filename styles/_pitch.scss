@@ -7,9 +7,10 @@
   display: grid;
   justify-content: center;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: max-content;
+  grid-template-rows: 1fr 1fr;
   overflow: hidden;
   grid-column-gap: 20px;
+  grid-row-gap: 20px;
 
 }
 
@@ -20,8 +21,8 @@
 }
 
 .pitch-entry-icon-image {
-  width: 100%;
-  height: 100%;
+  width: 5vw;
+  height: 5vw;
 }
 
 .pitch-entry-title {
@@ -43,8 +44,6 @@
   word-break: break-word;
   font-size: 1vw;
 
-  margin-bottom: 30px;
-
   /*overflow-wrap: break-word; */
 }
 
@@ -55,18 +54,29 @@
   "pitch-entry-icon pitch-entry-title"
   "pitch-entry-text pitch-entry-text";
 
-  grid-template-columns: 35% 65%;
+  grid-template-columns: 5vw 1fr;
 }
 
 
 @media only screen and (max-width: 800px) and (min-width: 0px) {
   .pitch { 
     grid-template-columns: 100%; 
-    grid-template-rows: 1fr 1fr 1fr;
+    margin-bottom: 30px;
+  }
+
+  .pitch-entry-icon-image {
+    width: 15vw;
+    height: unset;
+  }
+
+  .pitch {
+    grid-template-rows: repeat(6, 1fr);
+    grid-row-gap: 10px;
   }
 
   .pitch-entry {
-    grid-template-columns: 15% 85%;
+    grid-template-columns: 1fr 2fr;
+    grid-row-gap: 5px;
   }
 
   .pitch-entry-title {
