@@ -1,18 +1,50 @@
 /* This file contains SCSS for the navbar */
 
-#home-icon-container { grid-area: home-icon-container;}
-#navbar-icon-container{ 
-  grid-area: navbar-icon-container;
-  text-align: center;
-  margin-top: 7px;
-}
+#navbar-home-container { grid-area: navbar-home-container; }
+#navbar-icon-container{ grid-area: navbar-icon-container; }
 #navbar-language-container { grid-area: navbar-language-container; }
+
+.navbar {
+  display: grid;
+  grid-template-areas: 'navbar-home-container navbar-icon-container navbar-language-container';
+  grid-template-columns: 4fr 1fr 4fr;
+  grid-template-rows: 110px;
+  grid-area: navbar;
+ // margin-top: 5px;
+  overflow: hidden;
+ // margin-bottom: 5px;
+  width: 100%;
+  position: relative;
+  padding-bottom: 3px;
+  padding-top: 5px;
+  background-color: #202325;
+  //background-color: #1a2836;
+}
 
 .navbar-language-container {
   overflow: hidden;
   //display: flex;
   //justify-content: flex-end;
   text-align: right;
+}
+
+.navbar-icon-container {
+  display: grid;
+  grid-column-gap: 20px;
+  grid-template-columns: repeat(3, 80px);
+  margin-top: 20px;
+}
+
+.navbar-home-container {}
+
+.navbar-luix-icon {
+  width: 100px;
+  height: 100px;
+}
+
+.navbar-middle-icon{
+  width: 80px;
+  height: 80px;
 }
 
 #navbar-language-svenska {
@@ -43,25 +75,11 @@
   transform: scale(1.2);
 }
 
-.home-icon-container { 
-  text-align: left;
-}
-
-#home-icon {
-  margin-left: 15px;
-  width: 60px;
-  height: 90%;
-  opacity: 0.7;
-}
 
 .navbar-icon {
   opacity: 0.7;
 }
 
-.navbar-middle-icon{
-  width: 90px;
-  height: 90px;
-}
 
 #diy-icon{
   margin-right: 20px;
@@ -87,53 +105,24 @@
   }
 }
 
-.navbar {
-  display: grid;
-  grid-template-areas: 'home-icon-container navbar-icon-container navbar-language-container';
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 110px;
-  grid-area: navbar;
- // margin-top: 5px;
-  overflow: hidden;
- // margin-bottom: 5px;
-  width: 100%;
-  position: relative;
-  padding-bottom: 3px;
-  padding-top: 5px;
-  background-color: #202325;
-  //background-color: #1a2836;
-}
 
 @media only screen and (max-width: 800px) and (min-width: 0px) {
-.navbar-middle-icon{
-  width: 70px;
-  height: 70px;
+.navbar-home-container {
+}
+.navbar-icon-container{
+  display: none;
+}
+.navbar-language-container {
+  display: none;
 }
 
 .navbar {
   grid-template-columns: 1fr 2fr 1fr;
 }
 
-#home-icon {
-  margin-left: 10px;
-  width:  70px;
-  height: 70px;
+.navbar-language-container {
+  flex-direction: row;
 }
 
-#diy-icon{
-  margin-right: 10px;
-}
-
-  .navbar-language-container {
-    flex-direction: row;
-  }
-
-  #navbar-language-english {
-    height: 50%;
-  }
-
-  #navbar-language-svenska {
-    height: 50%;
-  }
 }
 
