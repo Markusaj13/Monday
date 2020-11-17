@@ -114,6 +114,9 @@
   grid-template-columns: repeat(3, 80px);
   margin-top: 20px; }
 
+.navbar-burger-container {
+  display: none; }
+
 .navbar-luix-icon {
   width: 100px;
   height: 100px; }
@@ -173,6 +176,9 @@
 
   .navbar-language-container {
     display: none; }
+
+  .navbar-burger-container {
+    display: block; }
 
   .navbar {
     grid-template-columns: 1fr 2fr 1fr; }
@@ -302,3 +308,5 @@ body {
 .monday-text {
   font-family: "Source Sans Pro", sans-serif;
   color: #cfcbc4; }
+
+/*# sourceMappingURL=index.css.map */

@@ -36,6 +36,9 @@
 }
 
 .navbar-home-container {}
+.navbar-burger-container {
+  display: none;
+}
 
 .navbar-luix-icon {
   width: 100px;
@@ -113,11 +116,16 @@
 @media only screen and (max-width: 800px) and (min-width: 0px) {
 .navbar-home-container {
 }
+
 .navbar-icon-container{
   display: none;
 }
 .navbar-language-container {
   display: none;
+}
+
+.navbar-burger-container {
+  display: block;
 }
 
 .navbar {
@@ -127,6 +135,5 @@
 .navbar-language-container {
   flex-direction: row;
 }
-
 }
 
