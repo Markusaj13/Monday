@@ -43,6 +43,7 @@ urlParser.set_arg("page", InitialPage);
 const homeIcon = document.getElementById("home-icon")
 const diyIcon = document.getElementById("diy-icon")
 const purchaseIcon = document.getElementById("purchase-icon")
+const luixIcon = document.getElementById("luix-icon")
 
 
 var activeIcon = null
@@ -148,7 +149,8 @@ language_service.when_ready(CurrentLanguage);
 ActiveButton.classList.toggle("navbar-language-active", true);
 
 
-homeIcon.onclick = () => {
+onhomeClick = () => {
+    console.log("Clicked on me")
     deactivate_active()
     activate_home()
 
@@ -157,8 +159,10 @@ homeIcon.onclick = () => {
 
     urlParser.set_arg("page", "home");
     urlParser.update_history();
-
 }
+
+homeIcon.onclick = onhomeClick
+luixIcon.onclick = onhomeClick
 
 diyIcon.onclick = () => {
     deactivate_active()
@@ -181,5 +185,6 @@ purchaseIcon.onclick = () => {
     urlParser.set_arg("page", "purchase");
     urlParser.update_history();
 }
+
 
 urlParser.update_history();
